@@ -3,6 +3,7 @@
 {% block content %}
 
     <h1><a href="{{ plan.event.get_absolute_url }}"><</a> {{ plan }}</h1>
+    <a href="{% url 'edit plan' event_id=plan.event.pk plan_id=plan.pk %}">Редактировать</a>
 
     <br>
 
@@ -29,16 +30,18 @@
 
         <hr>
 
-    <h3>План: {{ plan.year }}, {{ plan.month }}</h3>
+{#    <h3>План: {{ plan.year }}, {{ plan.month }}</h3>#}
+    <h3>Расписание: </h3>
 
-    {% if result %}
-        {{ result }}
+    {% if shedule %}
+        {{ shedule }}
         <br>
-        Тут картинки
-        <br>
-        А тут отчет
+        <a href="{% url 'edit shedule' event_id=plan.event.pk plan_id=plan.pk %}"> Изменить</a>
+
     {% else %}
-        Произошло? Добавить!
+        План не в расписании.
+        <br>
+        <a href="{% url 'create shedule' event_id=plan.event.pk plan_id=plan.pk %}"> Добавить?</a>
     {% endif %}
 
 

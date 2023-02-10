@@ -13,3 +13,7 @@ class ModifyEvent(forms.Form):
 class ModifyPlan(forms.Form):
     year = forms.IntegerField(label="Год", initial=datetime.datetime.now().year)
     month = forms.ModelChoiceField(queryset=Month.objects.all(), label="Месяц", initial=datetime.datetime.now().month)
+
+class ModifyShedule(forms.Form):
+    begin = forms.DateField(label='Дата начала')
+    end = forms.DateField(label='Дата конца')

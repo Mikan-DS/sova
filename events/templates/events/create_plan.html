@@ -2,11 +2,11 @@
 
 {% block content %}
 
-    <h1><a href="{% url 'events' %}"><</a> Создание мероприятия</h1>
+    <h1><a href="{% url 'event' event_id=event.pk %}"><</a> {{ event }}: Добавление плана на мероприятие</h1>
 
     <br>
 
-    <form action="{% url 'add plan' event_id=event_id %}" method="post">
+    <form action="{% url 'add plan' event_id=event.pk %}" method="post">
 
         {% csrf_token %}
         {{ form.as_p }}

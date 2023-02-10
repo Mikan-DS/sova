@@ -1,3 +1,4 @@
+import django.conf
 from django.forms import model_to_dict
 from django.shortcuts import render, redirect
 
@@ -48,11 +49,7 @@ def edit_event(request, event_id):
             # print(form.cleaned_data)
             try:
                 # e = Event.objects.create(**form.cleaned_data)
-                e.title = form.cleaned_data['title']
-                e.description = form.cleaned_data['description']
-                e.event_type = form.cleaned_data['event_type']
-                e.event_level = form.cleaned_data['event_level']
-                e.weorg = form.cleaned_data['weorg']
+                update_model_from_dict(e, form.cleaned_data)
                 e.save()
                 return redirect(e.get_absolute_url())
             except:
@@ -83,29 +80,100 @@ def add_plan(request, event_id):
 
     else:
         form = ModifyPlan()
-    return render(request, 'events/create_plan.html', {'form': form, 'event_id':event_id})
+    return render(request, 'events/create_plan.html', {'form': form, 'event': Event.objects.get(pk=event_id)})
 
 def plan(request, event_id, plan_id):
+
     c_plan = Plan.objects.get(pk=plan_id)
 
-    result = Result.objects.filter(plan_id=plan_id)
+    # shedules = Shedule.objects.filter(plan_id=plan_id)
+
+    try:
+        shedule = c_plan.shedule
+    except:
+        shedule = None
+
+    reports = []
 
     return render(request, 'events/plan.html', {
         'plan': c_plan,
         'type': c_plan.event.event_type,
         'level': c_plan.event.event_level,
         'weorg': "Организаторы" if c_plan.event.weorg else 'Участники',
-        'result': result[0] if result else False
+        'shedule': shedule
 
     })
+
+
+
+def edit_plan(request, event_id, plan_id):
+    p = Plan.objects.get(pk=plan_id)
+    if request.method == "POST":
+        form = ModifyPlan(request.POST)
+        if form.is_valid():
+            # print(form.cleaned_data)
+            try:
+                # e = Event.objects.create(**form.cleaned_data)
+                update_model_from_dict(p, form.cleaned_data)
+                p.save()
+                return redirect(p.get_absolute_url())
+            except:
+                form.add_error(None, "Произошла ошибка при обновлении плана.")
+
+    else:
+        form = ModifyPlan(initial=model_to_dict(p))
+
+    return render(
+        request,
+        'events/edit_plan.html',
+        {
+            'form': form,
+            'event': Event.objects.get(pk=event_id),
+            'plan': p
+        }
+    )
+
+def delete_plan(request, event_id, plan_id):
+    Plan.objects.get(pk=plan_id).delete()
+    return redirect(Event.objects.get(pk=event_id).get_absolute_url())
+
+def add_shedule(request, event_id, plan_id):
+    p = Plan.objects.get(pk=plan_id)
+    day = datetime.datetime.now()
+    pday = datetime.datetime(p.year, p.month.pk, 1)
+    day = day if day >= pday else pday
+    Shedule.objects.get_or_create(plan_id=plan_id, begin=day, end=day)
+    return redirect(p.get_absolute_url())
+
+def edit_shedule(request, event_id, plan_id):
+    shedule = Shedule.objects.get(plan_id=plan_id)
+    if request.method == "POST":
+        form = ModifyShedule(request.POST)
+        if form.is_valid():
+            # print(form.cleaned_data)
+            try:
+                # e = Event.objects.create(**form.cleaned_data)
+                update_model_from_dict(shedule, form.cleaned_data)
+                shedule.save()
+                return redirect(shedule.plan.get_absolute_url())
+            except:
+                form.add_error(None, "Произошла ошибка при обновлении плана.")
+    else:
+        form = ModifyShedule(initial=model_to_dict(shedule))
+
+    return render(
+        request,
+        'events/edit_shedule.html',
+        {
+            'form': form,
+            'event': Event.objects.get(pk=event_id),
+            'plan': shedule
+        }
+    )
+
 
 def plans(request):
     all_events = Plan.objects.all()
     return render(request, 'events/plans.html', {'plans': all_events})
 
-def raiting(request):
-    return render(request, 'events/inprogress.html')
-
-def myprofile(request):
-    return render(request, 'events/inprogress.html')
 

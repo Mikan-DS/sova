@@ -2,18 +2,20 @@
 
 {% block content %}
 
-    <h1><a href="{% url 'events' %}"><</a> Создание мероприятия</h1>
+    <h1><a href="{% url 'plan' event_id=plan.event.pk plan_id=plan.pk %}"><</a> {{ event.title }}: Редактирование плана</h1>
 
     <br>
 
-    <form action="{% url 'create event' %}" method="post">
+    <form action="{% url 'edit plan' event_id=event.pk plan_id=plan.pk %}" method="post">
 
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button type="submit">Добавить</button>
+        <button type="submit">Обновить</button>
 
     </form>
+    <button type="submit" onclick="location.href='{% url 'delete plan' event_id=event.pk plan_id=plan.pk %}'">Удалить</button>
+
 
 
 {% endblock %}
