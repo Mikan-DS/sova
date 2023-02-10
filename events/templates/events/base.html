@@ -13,7 +13,7 @@
 <hr>
 Модераторы
 <a href="{% url 'events' %}">Редактирование мероприятий</a>
-<a href="#">Генератор наградных документов</a>
+<a href="{% url 'port_generator' %}">Генератор наградных документов</a>
 
 <hr>
 Зарегистрированный пользователь
@@ -31,6 +31,15 @@
 
 {% block content %}
 {% endblock %}
+
+<br>
+
+<div style="background-color: bisque; width: 100%;">
+
+    Тут будет футер страницы
+
+</div>
+
 
 </body>
 </html>

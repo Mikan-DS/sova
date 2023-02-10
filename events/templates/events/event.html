@@ -3,6 +3,7 @@
 {% block content %}
 
     <h1><a href="{% url 'events' %}"><</a> {{ event }}</h1>
+    <a href="{% url 'edit event' event_id=event.pk %}">Редактировать</a>
 
     <br>
 

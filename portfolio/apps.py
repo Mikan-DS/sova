@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EventsConfig(AppConfig):
+class PortfolioConfig(AppConfig):
     default_auto_field = 'django.db.models.AutoField'
-    name = 'events'
+    name = 'portfolio'

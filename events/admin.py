@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from . import models as m
+
+for i in [m.Event, m.EventType, m.EventLevel, m.Plan, m.Result]:
+    admin.site.register(i)

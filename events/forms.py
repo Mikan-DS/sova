@@ -1,3 +1,5 @@
+import datetime
+
 from django import forms
 from .models import *
 
@@ -9,5 +11,5 @@ class ModifyEvent(forms.Form):
     weorg = forms.BooleanField(required=False, label="Организаторы", initial=True)
 
 class ModifyPlan(forms.Form):
-    year = forms.IntegerField(label="Год", initial=2023)
-    month = forms.ModelChoiceField(queryset=Month.objects.all(), label="Месяц")
+    year = forms.IntegerField(label="Год", initial=datetime.datetime.now().year)
+    month = forms.ModelChoiceField(queryset=Month.objects.all(), label="Месяц", initial=datetime.datetime.now().month)

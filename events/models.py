@@ -22,7 +22,6 @@ class Event(models.Model):
     def __str__(self):
         return self.title
 
-    @property
     def get_absolute_url(self):
         return reverse('event', kwargs={'event_id': self.pk})
 
@@ -41,7 +40,6 @@ class Plan(models.Model):
     def __str__(self):
         return str(self.event)+": "+str(self.year)+" "+str(self.month)
 
-    @property
     def get_absolute_url(self):
         return reverse('plan', kwargs={'event_id': self.event.pk, 'plan_id': self.pk})
 
@@ -49,7 +47,7 @@ class Result(models.Model):
     plan = models.ForeignKey('Plan', models.CASCADE, null=True, verbose_name="План")
     begin = models.DateField(auto_now=True, verbose_name='Дата начала')
     end = models.DateField(auto_now=True, verbose_name='Дата конца')
-    peoples = models.IntegerField(verbose_name="Людей задейственно")
+
 
     def __str__(self):
         return "RESULT"
