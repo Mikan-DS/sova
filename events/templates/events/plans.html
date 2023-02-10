@@ -1,0 +1,27 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+
+    <h1>План мероприятий</h1>
+{% comment %}    <a href="{% url 'create event' %}">Добавить новое мероприятие</a>{% endcomment %}
+    <br>
+
+    ФИЛЬТРЫ #TODO
+
+    <br>
+
+    <ul>
+        {% for e in plans %}
+            <li>
+                <div>
+                    <a href="{{ e.get_absolute_url }}"><h3 style="display: inline">{{ e }}</h3></a>
+
+                    {{ e.event.event_type }}
+                </div>
+
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

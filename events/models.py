@@ -34,14 +34,19 @@ class Month(models.Model):
         return self.title
 
 class Plan(models.Model):
-    event = models.ForeignKey('Event', models.SET_NULL, null=True, verbose_name="Мероприятие")
-    month = models.ForeignKey('Month', models.SET_NULL, null=True, verbose_name="Месяц")
+    event = models.ForeignKey('Event', models.CASCADE, null=True, verbose_name="Мероприятие")
+    month = models.ForeignKey('Month', models.CASCADE, null=True, verbose_name="Месяц")
     year = models.IntegerField(verbose_name="Год")
 
     def __str__(self):
-        return "PLAN"
+        return str(self.event)+": "+str(self.year)+" "+str(self.month)
+
+    @property
+    def get_absolute_url(self):
+        return reverse('plan', kwargs={'event_id': self.event.pk, 'plan_id': self.pk})
+
 class Result(models.Model):
-    plan = models.ForeignKey('Plan', models.SET_NULL, null=True, verbose_name="План")
+    plan = models.ForeignKey('Plan', models.CASCADE, null=True, verbose_name="План")
     begin = models.DateField(auto_now=True, verbose_name='Дата начала')
     end = models.DateField(auto_now=True, verbose_name='Дата конца')
     peoples = models.IntegerField(verbose_name="Людей задейственно")
