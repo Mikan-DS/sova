@@ -1,0 +1,35 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+
+    <h1>План мероприятий</h1>
+    <br>
+
+    <h2>Фильтры</h2>
+    <form action="{% url 'plans' %}" method="get">
+
+        {{ filter.as_p }}
+
+        <button type="submit">Показать</button>
+
+    </form>
+
+
+    <br>
+    <hr>
+
+    <ul>
+        {% for e in plans %}
+            <li>
+                <div id="plan_{{ e.pk }}">
+                    <a href="{{ e.get_absolute_url }}?returnto={{ request.path }}#plan_{{ e.pk }}"><h3 style="display: inline">{{ e }}</h3></a>
+
+                    {{ e.event.event_type }}
+                </div>
+
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

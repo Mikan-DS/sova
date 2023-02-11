@@ -1,0 +1,27 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <style>
+        #send_message_input{
+            width: 80%;
+            height: 2rem;
+        }
+    </style>
+
+    <h1><a href="{% url 'index' %}"><</a> Чат с Хранителями Мудрости</h1>
+
+    <br>
+
+    {% include 'appeals/chat.html' %}
+
+    <form action="{% url 'ask moderator' %}#autoScroll" method="post">
+    {% csrf_token %}
+    {{ form.content }}
+
+<button type="submit">Отправить</button>
+
+</form>
+
+
+{% endblock %}

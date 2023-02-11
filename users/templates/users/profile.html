@@ -8,13 +8,16 @@
 
     <ul>
 
-        <li>ФИО:</li>
-        <li>Логин: </li>
-        <li>Дата рождения: </li>
-        <li>Группа: </li>
-        <li>Номер телефона: </li>
-        <li>Email: </li>
+        <li>ФИО: {{ request.user.first_name }}</li>
+        <li>Логин: {{ request.user.username }}</li>
+        <li>Дата рождения: {{ request.user.student.birthday }}</li>
+        <li>Группа: {{ request.user.student.group.title }}</li>
+        <li>Номер телефона: {{ request.user.student.number }}</li>
+        <li>Email: {{ request.user.email }}</li>
 
     </ul>
+
+
+    Изменять последние два поля. Добавить фото
 
 {% endblock %}

@@ -1,0 +1,32 @@
+
+{% block chat %}
+
+
+    <div style="border: black dashed medium;
+                height:18rem;
+                width: 95%;
+
+                overflow-y:auto;
+">
+
+        {% for message in messages %}
+
+            <p>
+                <div>
+                    {% if message.by_moderator %}
+                        Хранитель
+                    {% else %}
+                        {{ message.user.first_name }}
+                    {% endif %}:
+                    ({{ message.sended_at }})
+                </div>
+            <br>
+                {{ message.content }}
+            </p>
+            <hr>
+
+        {% endfor %}
+        <span id="autoScroll"></span>
+    </div>
+
+{% endblock %}

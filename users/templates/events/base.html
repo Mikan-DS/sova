@@ -19,7 +19,7 @@
 
     Модераторы
     <a href="{% url 'events' %}">Редактирование мероприятий</a>
-    <a href="{% url 'appeals' %}">Обращения</a>
+    <a href="#">Обращения</a>
     <a href="{% url 'port_generator' %}">Генератор наградных документов</a>
 
 
@@ -30,7 +30,7 @@
     Зарегистрированный пользователь: {{ request.user.username }}
     <a href="#">Рейтинг</a>
     <a href="{% url 'profile' %}">Личный кабинет</a>
-    <a href="{% url 'ask moderator' %}#autoScroll">Чат с модератором</a>
+    <a href="#">Чат с модератором</a>
     <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
 
     {% else %}

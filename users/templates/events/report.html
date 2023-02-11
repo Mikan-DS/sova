@@ -1,0 +1,46 @@
+{% extends 'events/base.html' %}
+
+
+{% block content %}
+
+    <h1><a href="{{ returnto }}"><</a> {{ report }}</h1>
+
+    {% if request.user.is_staff %}
+        <a href="{% url 'edit report' report_id=report.pk %}">Редактировать</a>
+    {% endif %}
+    <br>
+
+    <hr>
+
+        Создано: {{ report.created_at }}
+    <br>
+        {% if report.created_at != report.edited_at %}
+            Изменено: {{ report.edited_at }}
+            <br>
+        {% endif %}
+    <br>
+
+        {{ report.content }}
+
+            <ul>
+
+            {% for image in images %}
+                <li>
+                    <img src="{{ image.image.url }}" style="width: 40%">
+                    {% if request.user.is_staff %}
+                        <a href="{% url 'delete image' image_id=image.pk %}">Удалить</a>
+                    {% endif %}
+
+                </li>
+            {% endfor %}
+        </ul>
+
+
+
+        {% if request.user.is_staff %}
+        <a href="{% url 'add images' report_id=report.pk %}#upload_new">Добавить фотографии</a>
+        {% endif %}
+
+
+
+{% endblock %}

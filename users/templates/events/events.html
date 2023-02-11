@@ -1,0 +1,19 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+
+    <h1>Список мероприятий за все время</h1>
+    <a href="{% url 'create event' %}">Добавить новое мероприятие</a>
+    <br>
+
+
+    <ul>
+        {% for e in events %}
+            <li>
+                <a href="{{ e.get_absolute_url }}"><h3>{{ e.title }}</h3></a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

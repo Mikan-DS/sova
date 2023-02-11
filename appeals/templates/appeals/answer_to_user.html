@@ -1,0 +1,27 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <style>
+        #send_message_input{
+            width: 80%;
+            height: 2rem;
+        }
+    </style>
+
+    <h1><a href="{% url 'appeals' %}"><</a> Чат с {{ user.first_name }}</h1>
+
+    <br>
+
+    {% include 'appeals/chat.html' %}
+
+    <form action="{% url 'answer user' user_id=user.pk %}#autoScroll" method="post">
+    {% csrf_token %}
+    {{ form.content }}
+
+<button type="submit">Отправить</button>
+
+</form>
+
+
+{% endblock %}

@@ -25,6 +25,7 @@ class Student(models.Model):
     birthday = models.DateField(verbose_name="Дата рождения")
     number = models.CharField(max_length=15, verbose_name="Номер телефона")
     user = models.OneToOneField(auth_models.User, models.CASCADE, verbose_name='Пользователь')
+    image = models.ImageField(upload_to="students/", verbose_name='Фото профиля', null=True)
 
     def __str__(self):
         return self.user.first_name
