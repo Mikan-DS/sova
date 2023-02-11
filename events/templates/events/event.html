@@ -3,12 +3,17 @@
 {% block content %}
 
     <h1><a href="{% url 'events' %}"><</a> {{ event }}</h1>
-    <a href="{% url 'edit event' event_id=event.pk %}">Редактировать</a>
+
+    {% if request.user.is_staff %}
+        <a href="{% url 'edit event' event_id=event.pk %}">Редактировать</a>
+    {% endif %}
+
+
 
     <br>
 
     <p>
-    {{ event.description }}
+        {{ event.description }}
     </p>
 
     <hr>
@@ -19,7 +24,7 @@
         <li>
             Тип мероприятия: {{ type }}
         </li>
-            <li>
+        <li>
             Уровень мероприятия: {{ level }}
         </li>
 
@@ -28,17 +33,18 @@
         </li>
     </ul>
 
-        <hr>
+    <hr>
 
     <h3>Планы</h3>
     <ul>
-    <li>
-        <ul><a href="{% url 'add plan' event_id=event.pk %}">Добавить план</a></ul>
-    </li>
+
+            {% if request.user.is_staff %}
+                <li><a href="{% url 'add plan' event_id=event.pk %}">Добавить план</a></li>
+            {% endif %}
         {% for p in plans %}
-            <ul>
+            <li>
                 <a href="{{ p.get_absolute_url }}"><h3>{{ p }}</h3></a>
-            </ul>
+            </li>
         {% endfor %}
     </ul>
 

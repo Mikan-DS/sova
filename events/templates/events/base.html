@@ -11,21 +11,41 @@
 <a href="/">Главная</a>
 <a href="{% url 'plans' %}">План мероприятий</a>
 <hr>
-Модераторы
-<a href="{% url 'events' %}">Редактирование мероприятий</a>
-<a href="{% url 'port_generator' %}">Генератор наградных документов</a>
-<a href="/admin/">Админка джанго</a>
 
-<hr>
-Зарегистрированный пользователь
-<a href="#">Рейтинг</a>
-<a href="#">Личный кабинет</a>
+{% if request.user.is_staff %}
 
-<hr>
-Незарегистрированный пользователь
-<a href="#">Войти</a>
+
+    Модераторы
+    <a href="{% url 'events' %}">Редактирование мероприятий</a>
+    <a href="#">Обращения</a>
+    <a href="{% url 'port_generator' %}">Генератор наградных документов</a>
+
+
+    <hr>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+    Зарегистрированный пользователь: {{ request.user.username }}
+    <a href="#">Рейтинг</a>
+    <a href="{% url 'profile' %}">Личный кабинет</a>
+    <a href="#">Чат с модератором</a>
+    <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
+
+    {% else %}
+    Незарегистрированный пользователь
+    <a href="{% url 'login' %}?next={{ request.path }}">Войти</a>
+
+{% endif %}
+
+{% if request.user.is_superuser %}
+    <hr>
+    Суперпользователь
+    <a href="/admin/">Панель управления</a>
+    <a href="#">Добавление студента</a>
+
+{% endif %}
+
 <hr style="height: 20px; background-color: black">
-
 
 
 <br>
@@ -35,7 +55,7 @@
 
 <br>
 
-<div style="background-color: bisque; width: 100%;">
+<div style="background: bisque; padding: 1rem; margin-left: -1rem; margin-right: -1rem; margin-top:  3rem;">
 
     Тут будет футер страницы
 

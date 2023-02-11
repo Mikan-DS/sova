@@ -1,0 +1,18 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{{ backto }}"><</a> Вход в аккаунт</h1>
+
+    <br>
+
+    <form action="{{ request.path }}?next={{ nextto }}" method="post">
+
+        {% csrf_token %}
+        {{ forms.as_p }}
+
+        <button type="submit">Войти</button>
+
+    </form>
+
+{% endblock %}

@@ -2,6 +2,8 @@ import datetime
 
 from django import forms
 from .models import *
+from .utils import *
+
 
 class ModifyEvent(forms.Form):
     title = forms.CharField(max_length=60, label="Название")
@@ -17,3 +19,17 @@ class ModifyPlan(forms.Form):
 class ModifyShedule(forms.Form):
     begin = forms.DateField(label='Дата начала')
     end = forms.DateField(label='Дата конца')
+
+class ModifyReport(forms.Form):
+    title = forms.CharField(max_length=60, label="Название")
+    content = forms.CharField(widget=forms.Textarea(attrs={'cols':60, 'rows': 10}), label="Описание")
+
+class AddImage(forms.Form):
+    image = forms.ImageField(label="Добавить изображение")
+
+
+class FilterPlans(forms.Form):
+    all_years = get_all_years()
+    year = forms.ChoiceField(widget=forms.CheckboxSelectMultiple, choices=int_choices(all_years), label="Годы", required=False) #, initial=all_years
+    months = get_all_months()
+    month = forms.ChoiceField(widget=forms.CheckboxSelectMultiple, choices=model_choices(months, Month), label="Месяцы", initial=months)

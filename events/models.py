@@ -68,12 +68,20 @@ class Shedule(models.Model):
 
 class Report(models.Model):
 
+    title = models.CharField(max_length=60, verbose_name="Название")
     shedule = models.ForeignKey('Shedule', models.CASCADE, verbose_name='Расписание')
     content = models.TextField(verbose_name='Контент')
-    created_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания', editable=False)
     edited_at = models.DateTimeField(auto_now=True, verbose_name='Дата редактирования')
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('report', kwargs={'report_id': self.pk})
+
 
 class ReportImage(models.Model):
 
     report = models.ForeignKey('Report', models.CASCADE, verbose_name='Отчет')
-    image = models.ImageField('Изображение')
+    image = models.ImageField(upload_to="reports/%Y/%m/%d/", verbose_name='Изображение')

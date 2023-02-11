@@ -25,4 +25,11 @@ urlpatterns = [
     path('events/<int:event_id>/edit/<int:plan_id>/create_shedule', add_shedule, name="create shedule"),
     path('events/<int:event_id>/edit/<int:plan_id>/edit_shedule', edit_shedule, name="edit shedule"),
 
+    path('events/<int:event_id>/edit/<int:plan_id>/report/create', create_report, name="create report"),
+    path('events/<int:event_id>/edit/<int:plan_id>/report/<int:report_id>', create_report, name="edit report"),
+
+    path('reports/<int:report_id>', read_report, name='report'),
+    path('reports/edit/<int:report_id>', edit_report, name='edit report'),
+    path('reports/edit/delete_image/<int:image_id>', delete_image, name='delete image'),
+    path('reports/edit/<int:report_id>/add_images/', add_images, name='add images'),
 ]
