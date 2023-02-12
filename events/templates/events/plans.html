@@ -3,14 +3,15 @@
 {% block content %}
 
 
-    <h1>План мероприятий</h1>
+    <h1>План мероприятий на {{ request.GET.year }} год</h1>
     <br>
 
-    <h2>Фильтры</h2>
+
     <form action="{% url 'plans' %}" method="get">
 
-        {{ filter.as_p }}
-
+        Выбор года
+        {{ filter.year }}
+        :
         <button type="submit">Показать</button>
 
     </form>
@@ -19,17 +20,48 @@
     <br>
     <hr>
 
-    <ul>
-        {% for e in plans %}
-            <li>
-                <div id="plan_{{ e.pk }}">
-                    <a href="{{ e.get_absolute_url }}?returnto={{ request.path }}#plan_{{ e.pk }}"><h3 style="display: inline">{{ e }}</h3></a>
+{#    {% for mont in monts %}#}
+{#        {% call_method  %}#}
+{#        {% for plan in mont %}#}
+{#            <h2>{{ plan.month }}</h2>#}
+{#        {% endfor %}#}
+{#    {% endfor %}#}
 
-                    {{ e.event.event_type }}
+    {% for month, plans in monts.items %}
+        <h2>{{ month.title }}</h2>
+        {% if plans %}
+            <ul>{% for plan in plans %}
+                <li>
+
+                <div id="plan_{{ plan.pk }}">
+                    <a href="{{ plan.get_absolute_url }}?returnto={{ request.path }}#plan_{{ plan.pk }}">
+                        <h3 style="display: inline">{{ plan.event }}</h3></a>
+
+                    {{ plan.event.event_type }}
                 </div>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            На этот месяц запланированных мероприятий нет.
+        {% endif %}
 
-            </li>
-        {% endfor %}
-    </ul>
+
+    {% endfor %}
+
+{##}
+{##}
+{#    <ul>#}
+{#        {% for e in plans %}#}
+{#            <li>#}
+{#                <div id="plan_{{ e.pk }}">#}
+{#                    <a href="{{ e.get_absolute_url }}?returnto={{ request.path }}#plan_{{ e.pk }}"><h3 style="display: inline">{{ e }}</h3></a>#}
+{##}
+{#                    {{ e.event.event_type }}#}
+{#                </div>#}
+{##}
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
 
 {% endblock %}

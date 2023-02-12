@@ -29,6 +29,14 @@
         <li>
             Статус: {{ weorg }}
         </li>
+        {% if shedule%}
+            <li>
+                Задействовано людей: {{ people_count }}
+            {% if request.user.is_staff %}
+                <a href="{% url 'change shedule students' plan_id=plan.pk %}">Изменить</a>
+            {% endif %}
+            </li>
+        {% endif %}
     </ul>
 
     <hr>

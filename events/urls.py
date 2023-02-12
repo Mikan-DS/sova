@@ -4,8 +4,10 @@ from .views import *
 
 urlpatterns = [
     path('', index, name="index"),
+    path('inprogress', inprogress, name='inprogress'),
     path('events/', events, name="events"),
     path('plans/', plans, name="plans"),
+    path('plans/filter', plans_filter, name="plans filter"),
 
     path('events/create', create_event, name="create event"),
     path('events/<int:event_id>/', event, name="event"),
@@ -15,13 +17,14 @@ urlpatterns = [
 
     path('events/<int:event_id>/add_plan', add_plan, name="add plan"),
 
+    path('events/plans/<int:plan_id>', plan, name="plan"),
     path('events/<int:event_id>/<int:plan_id>', plan, name="plan"),
     path('events/<int:event_id>/edit/<int:plan_id>', edit_plan, name="edit plan"),
     path('events/<int:event_id>/dit/<int:plan_id>/delete', delete_plan, name="delete plan"),
 
-    path('events/<int:event_id>/<int:plan_id>', plan, name="plan"),
-    path('events/<int:event_id>/edit/<int:plan_id>', edit_plan, name="edit plan"),
-    path('events/<int:event_id>/edit/<int:plan_id>/delete', delete_plan, name="delete plan"),
+    # path('events/<int:event_id>/<int:plan_id>', plan, name="plan"),
+    # path('events/<int:event_id>/edit/<int:plan_id>', edit_plan, name="edit plan"),
+    # path('events/<int:event_id>/edit/<int:plan_id>/delete', delete_plan, name="delete plan"),
     path('events/<int:event_id>/edit/<int:plan_id>/create_shedule', add_shedule, name="create shedule"),
     path('events/<int:event_id>/edit/<int:plan_id>/edit_shedule', edit_shedule, name="edit shedule"),
 

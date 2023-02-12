@@ -1,8 +1,16 @@
 from django.urls import path
+
+from events.views import inprogress
 from .views import *
 
 urlpatterns = [
 
-    path('generator', generator, name='port_generator')
+    path('', portfolio, name='portfolio'),
+    path('generator', generator, name='port_generator'),
+    path('plan_<int:plan_id>/edit', edit_peoples_on_shedule, name='change shedule students'),
+    path('plan_<int:plan_id>/edit/byhand', edit_peoples_byhand, name='change shedule students byhand'),
+    path('plan/delete/<int:activity_id>', delete_student_from_plan, name='remove student from plan'),
+    path('plan_<int:plan_id>/edit/raw', inprogress, name='change shedule students raw'),
+    path('plan_<int:plan_id>/edit/excel', inprogress, name='change shedule students excel'),
 
 ]

@@ -19,17 +19,18 @@ def login_user(request):
 
     if request.method == "POST":
 
-        form = LoginUserForm(request.POST)
+        form = LoginUserForm(data=request.POST)
 
-        try:
-            user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
-            if user is not None:
-                login(request, user)
-                return redirect(nextpage)
-            else:
-                form.add_error(None, "Данные неверны")
-        except:
-            form.add_error(None, "Произошла неизвестная ошибка")
+        if form.is_valid():
+            try:
+                user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+                if user is not None:
+                    login(request, user)
+                    return redirect(nextpage)
+                else:
+                    form.add_error(None, "Данные неверны")
+            except:
+                form.add_error(None, "Произошла неизвестная ошибка")
     else:
         form = LoginUserForm()
 
@@ -57,4 +58,30 @@ def only_staff(f):
 @login_required
 def profile(request):
 
-    return render(request, 'users/profile.html')
+    return render(request, 'users/profile.html')\
+
+@login_required
+def edit_profile(request):
+    if request.method == "POST":
+        form = ChangeUser(request.POST, request.FILES or None)
+        # print(form.cleaned_data['number'])
+
+        if form.is_valid():
+
+            try:
+                request.user.email = form.cleaned_data['email']
+                request.user.student.number = '+7'+form.cleaned_data['number'][-10:]
+                if form.cleaned_data['image']:
+
+                    request.user.student.image = form.cleaned_data['image']
+                request.user.save()
+                request.user.student.save()
+
+                return redirect('profile')
+            except:
+                pass
+
+    else:
+        form = ChangeUser(initial={"number": request.user.student.number, "email": request.user.email})
+
+    return render(request, 'users/edit_profile.html', {'form': form})

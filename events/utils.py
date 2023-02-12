@@ -1,3 +1,5 @@
+from django import template
+
 from .models import *
 
 
@@ -18,7 +20,7 @@ def get_all_months():
 
 
 def int_choices(__iter):
-    return {(str(i), str(i)) for i in __iter}
+    return [(str(i), str(i)) for i in __iter]
 
 
 def model_choices(__iter, model):
@@ -31,3 +33,4 @@ def model_choices_dict(__iter, model):
 
 def int_choices_dict(__iter):
     return {str(i): i for i in __iter}
+

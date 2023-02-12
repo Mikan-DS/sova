@@ -48,5 +48,6 @@ def answer_to_user(request, user_id):
         'appeals/answer_to_user.html',
         {
             'messages': Message.objects.filter(user=user),
-            'form': form
+            'form': form,
+            'student': user
         })

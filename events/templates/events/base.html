@@ -12,6 +12,7 @@
 <a href="{% url 'plans' %}">План мероприятий</a>
 <a href="#">Q&A</a>
 <a href="#">Стена достижений</a>
+<a href="#">Сбор вторсырья</a>
 <hr>
 
 {% if request.user.is_staff %}
@@ -21,6 +22,7 @@
     <a href="{% url 'events' %}">Редактирование мероприятий</a>
     <a href="{% url 'appeals' %}">Обращения</a>
     <a href="{% url 'port_generator' %}">Генератор наградных документов</a>
+    <a href="{% url 'inprogress' %}">Вторсырье</a>
 
 
     <hr>
@@ -31,6 +33,7 @@
     <a href="#">Рейтинг</a>
     <a href="{% url 'profile' %}">Личный кабинет</a>
     <a href="{% url 'ask moderator' %}#autoScroll">Чат с модератором</a>
+    <a href="{% url 'portfolio' %}">Портфолио</a>
     <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
 
     {% else %}

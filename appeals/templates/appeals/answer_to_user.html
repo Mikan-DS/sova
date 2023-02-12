@@ -9,13 +9,13 @@
         }
     </style>
 
-    <h1><a href="{% url 'appeals' %}"><</a> Чат с {{ user.first_name }}</h1>
+    <h1><a href="{% url 'appeals' %}"><</a> Чат с {{ student.first_name }}</h1>
 
     <br>
 
     {% include 'appeals/chat.html' %}
 
-    <form action="{% url 'answer user' user_id=user.pk %}#autoScroll" method="post">
+    <form action="{% url 'answer user' user_id=student.pk %}#autoScroll" method="post">
     {% csrf_token %}
     {{ form.content }}
 

@@ -1,0 +1,21 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{% url 'profile' %}"><</a> Изменения профиля</h1>
+
+    <br>
+
+    <form action="{{ request.path }}" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <p>Номер телефона: {{ form.number }} {{ form.number.errors }}</p>
+        <p>Email: {{ form.email }}{{ form.email.errors }}</p>
+        <p>Изменить фото профиля: {{ form.image }}{{ form.image.errors }}</p>
+
+        <button type="submit">Изменить</button>
+
+    </form>
+
+{% endblock %}

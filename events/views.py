@@ -4,6 +4,7 @@ from django.forms import model_to_dict
 from django.shortcuts import render, redirect
 from django.utils import timezone
 
+from users.models import Student
 from users.views import only_staff
 from .models import *
 from .forms import *
@@ -106,10 +107,11 @@ def add_plan(request, event_id):
     return render(request, 'events/create_plan.html', {'form': form, 'event': Event.objects.get(pk=event_id)})
 
 
-def plan(request, event_id, plan_id):
+def plan(request, event_id=None, plan_id=None):
     c_plan = Plan.objects.get(pk=plan_id)
 
     # shedules = Shedule.objects.filter(plan_id=plan_id)
+
 
     try:
         shedule = c_plan.shedule
@@ -118,8 +120,11 @@ def plan(request, event_id, plan_id):
 
     if shedule:
         reports = Report.objects.filter(shedule_id=c_plan.shedule.pk)
+        # ppl_count = Student.objects.filter(activity__shedule=shedule).count()
+        ppl_count = len(set(Student.objects.filter(activity__shedule=shedule)))
     else:
         reports = None
+        ppl_count = 0
 
     return render(request, 'events/plan.html', {
         'plan': c_plan,
@@ -127,7 +132,8 @@ def plan(request, event_id, plan_id):
         'level': c_plan.event.event_level,
         'weorg': "Организаторы" if c_plan.event.weorg else 'Участники',
         'shedule': shedule,
-        'reports': reports
+        'reports': reports,
+        'people_count': ppl_count
 
     })
 
@@ -290,12 +296,12 @@ def add_images(request, report_id):
 
         if form.is_valid():
             try:
-                print(form.cleaned_data)
+                # print(form.cleaned_data)
                 img = ReportImage(report_id=report_id)
                 update_model_from_dict(img, form.cleaned_data)
                 img.save()
             except Exception as e:
-                print(repr(e))
+                # print(repr(e))
                 form.add_error(None, "Произошла неизвестная ошибка.")
     else:
 
@@ -313,7 +319,7 @@ def add_images(request, report_id):
         }
     )
 
-def plans(request):
+def plans_filter(request):
     # all_events = Plan.objects.filter(=[2023])
     # print(get_all_months())
     # if request.method == "GET":
@@ -331,12 +337,18 @@ def plans(request):
 
     _plans = Plan.objects.filter(year__in=request.GET.getlist('year'), month_id__in=request.GET.getlist('month')).order_by('year', 'month')
 
-    return render(request, 'events/plans.html', {'filter': filt, 'plans': _plans})#, {'plans': all_events})
+    return render(request, 'events/plans_filter.html', {'filter': filt, 'plans': _plans})#, {'plans': all_events})
 
-# def plans(request):
-#
-#     years = get_all_years()
-#     months = get_all_months()
-#
-#     return render(request, 'events/plans.html', {'years': years})#, {'plans': all_events})
-#
+def plans(request):
+
+    # years = get_all_years()
+    filt = ChoiceYear(request.GET or {'year': timezone.now().year} or None)
+    __plans = Plan.objects.filter(year=request.GET.get('year', timezone.now().year))
+    months = Month.objects.all()
+    monts = {i: __plans.filter(month_id=i.pk) for i in months}
+    # print(__plans)
+
+    return render(request, 'events/plans.html', {'filter': filt, 'monts': monts})#, {'plans': all_events})
+
+def inprogress(request, *args, **kwargs):
+    return render(request, 'events/inprogress.html')

@@ -33,3 +33,7 @@ class FilterPlans(forms.Form):
     year = forms.ChoiceField(widget=forms.CheckboxSelectMultiple, choices=int_choices(all_years), label="Годы", required=False) #, initial=all_years
     months = get_all_months()
     month = forms.ChoiceField(widget=forms.CheckboxSelectMultiple, choices=model_choices(months, Month), label="Месяцы", initial=months)
+
+
+class ChoiceYear(forms.Form):
+    year = forms.ChoiceField(choices=lambda : int_choices(get_all_years()), label="Выбор года") #, initial=all_years

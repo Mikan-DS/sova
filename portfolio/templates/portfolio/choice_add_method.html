@@ -1,0 +1,20 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{% url 'plan' plan_id=plan_id %}"><</a> Список студентов в расписание</h1>
+
+    <a href="{% url 'change shedule students byhand' plan_id=plan_id %}">Вручную</a>
+    <a href="{% url 'change shedule students raw' plan_id=plan_id %}">RAW</a>
+    <a href="{% url 'change shedule students excel' plan_id=plan_id %}">Excel</a>
+
+    <hr>
+
+    <ul>{% for activity in activities %}
+        <li>{{  activity.student  }}:{{ activity.event_role }}</li>
+    {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

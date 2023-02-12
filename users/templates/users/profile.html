@@ -6,6 +6,15 @@
 
     <br>
 
+    {% if request.user.student.image %}
+        <img src="{{ request.user.student.image.url }}" alt="profile photo"
+             style="
+             height: 40%;
+             width: 40%;
+             object-fit: contain;
+               ">
+    {% endif %}
+
     <ul>
 
         <li>ФИО: {{ request.user.first_name }}</li>
@@ -18,6 +27,8 @@
     </ul>
 
 
-    Изменять последние два поля. Добавить фото
+    <a href="{% url 'edit profile' %}">
+    Изменения профиля
+    </a>
 
 {% endblock %}

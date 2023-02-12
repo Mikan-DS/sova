@@ -61,9 +61,9 @@ class Shedule(models.Model):
 
     def __str__(self):
         if self.begin == self.end:
-            return "Дата: %s" % self.begin.strftime("%m/%d/%Y")
+            return "Дата: %s" % self.begin.strftime("%d/%m/%Y")
         else:
-            return "Дата начала: %s Дата конца: %s"%(self.begin.strftime("%m/%d/%Y"), self.end.strftime("%m/%d/%Y"))
+            return "Дата начала: %s Дата конца: %s"%(self.begin.strftime("%d/%m/%Y"), self.end.strftime("%d/%n/%Y"))
 
 
 class Report(models.Model):

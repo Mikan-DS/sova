@@ -1,0 +1,36 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{% url 'change shedule students' plan_id=plan_id %}"><</a> Ручное добавление студентов в расписание</h1>
+
+{#    <a href="{% url 'change shedule students byhand' plan_id=plan_id %}">Вручную</a>#}
+{#    <a href="{% url 'change shedule students raw' plan_id=plan_id %}">RAW</a>#}
+{#    <a href="{% url 'change shedule students excel' plan_id=plan_id %}">Excel</a>#}
+
+    <hr>
+
+    <ul>{% for activity in activities %}
+        <li id="student_line_{{ activity.student.pk }}">
+            {{  activity.student  }}:{{ activity.event_role }}
+
+            <button onclick="
+                    fetch('{% url 'remove student from plan' activity_id=activity.pk %}');
+                    document.getElementById('student_line_{{ activity.student.pk }}').remove();">
+                Убрать
+            </button></li>
+    {% endfor %}
+    </ul>
+
+    <form id="add_new" action="{% url 'change shedule students byhand' plan_id=plan_id %}#add_new" method="post">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Добавить</button>
+    </form>
+
+
+
+
+{% endblock %}
