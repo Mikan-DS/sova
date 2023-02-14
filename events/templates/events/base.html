@@ -10,9 +10,9 @@
 Общий
 <a href="/">Главная</a>
 <a href="{% url 'plans' %}">План мероприятий</a>
-<a href="#">Q&A</a>
-<a href="#">Стена достижений</a>
-<a href="#">Сбор вторсырья</a>
+<a href="{% url 'plans' %}">Q&A</a>
+<a href="{% url 'plans' %}">Стена достижений</a>
+<a href="{% url 'plans' %}">Сбор вторсырья</a>
 <hr>
 
 {% if request.user.is_staff %}

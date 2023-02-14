@@ -63,7 +63,7 @@ class Shedule(models.Model):
         if self.begin == self.end:
             return "Дата: %s" % self.begin.strftime("%d/%m/%Y")
         else:
-            return "Дата начала: %s Дата конца: %s"%(self.begin.strftime("%d/%m/%Y"), self.end.strftime("%d/%n/%Y"))
+            return "Дата начала: %s Дата конца: %s"%(self.begin.strftime("%d/%m/%Y"), self.end.strftime("%d/%m/%Y"))
 
 
 class Report(models.Model):

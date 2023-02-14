@@ -1,18 +1,70 @@
-{% extends 'events/base.html' %}
+{#{% extends 'events/base.html' %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#    <h1><a href="{{ backto }}"><</a> Вход в аккаунт</h1>#}
+{##}
+{#    <br>#}
+{##}
+{#    <form action="{{ request.path }}?next={{ nextto }}" method="post">#}
+{##}
+{#        {% csrf_token %}#}
+{#        {{ forms.as_p }}#}
+{##}
+{#        <button type="submit">Войти</button>#}
+{##}
+{#    </form>#}
+{##}
+{#{% endblock %}#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sova</title>
+    <link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+</head>
+</head>
+<body>
+    <section>
+        <div class="color">1</div>
+        <div class="color">1</div>
+        <div class="color">1</div>
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container">
+                <div class="form">
+                    <h2>Вход в аккаунт</h2>
+                    <form action="{{ request.path }}?next={{ nextto }}" method="post">
+                        {% csrf_token %}
+                        <div class="inputBox">
+{#                            <input type="Text" placeholder="username">#}
+                            {{ forms.username }}
+                        </div>
+                        <div class="inputBox">
+{#                            <input type="Password" placeholder="Password">#}
+                            {{ forms.password }}
 
-{% block content %}
+                        </div>
+{#                        <div class="inputBox">#}
+{#                            <input type="Mail" placeholder="Mail">#}
+{#                        </div>#}
+                        <div class="inputBox">
+                            <input type="submit" placeholder="login">
+                        </div>
+                        <p class="forget"> Забыли пароль? <a href="#">Нажмите сюда</a></p>
+{#                        <p class="forget"> Don't have aan account? <a href="#">Sugn up</a></p>#}
+                    </form>
 
-    <h1><a href="{{ backto }}"><</a> Вход в аккаунт</h1>
-
-    <br>
-
-    <form action="{{ request.path }}?next={{ nextto }}" method="post">
-
-        {% csrf_token %}
-        {{ forms.as_p }}
-
-        <button type="submit">Войти</button>
-
-    </form>
-
-{% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

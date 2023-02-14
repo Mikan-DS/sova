@@ -1,0 +1,2763 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-02-10T15:45:04.637Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Тестовое мероприятие",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-02-10T17:04:40.656Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "Дата начала: 02/10/2023 Дата конца: 02/01/2026",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u043d\\u0430\\u0447\\u0430\\u043b\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-02-10T18:43:41.184Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Тестовое мероприятие: 2024 Февраль",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-02-10T20:57:08.315Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Report object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-02-10T20:57:19.793Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "ReportImage object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-02-11T13:31:53.906Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "ОСтудент1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-02-11T13:32:55.962Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "ОСтудент1",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-02-11T13:36:29.797Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "Информационные системы и программирование",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-02-11T13:37:15.128Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Стандартный Преподаватель Первый",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-02-11T13:37:17.287Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Group object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-02-11T13:38:54.940Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "Обычный Студент Первый",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-02-11T13:40:21.760Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "2",
+      "object_repr": "Логисты",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-02-11T13:40:36.136Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "Стандартный Преподаватель Второй",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-02-11T13:40:37.906Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Л211/2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-02-11T13:40:59.097Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "ОСтудент2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-02-11T13:41:09.400Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-02-11T13:42:17.319Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "ОСтудент2",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Email address\", \"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-02-11T15:14:52.802Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "Модераторы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-02-11T15:15:08.664Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "ОСтудент2",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-02-11T15:24:29.732Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "ОСтудент1",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-02-11T20:45:34.977Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "1",
+      "object_repr": "Message object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-02-11T20:45:53.554Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "2",
+      "object_repr": "Message object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-02-11T20:48:13.873Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "3",
+      "object_repr": "from ОСтудент1: Сложно сказать, почему активно",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-02-11T22:36:32.796Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "mikan",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-02-12T04:32:21.689Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "Обычный Студент Первый",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043f\\u0440\\u043e\\u0444\\u0438\\u043b\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-02-12T12:58:19.068Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "Победитель",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-02-12T12:58:23.633Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "2",
+      "object_repr": "Призер",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-02-12T12:58:27.293Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "3",
+      "object_repr": "Участник",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-02-12T12:58:56.280Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "1",
+      "object_repr": "Achievement object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-02-12T13:12:53.886Z",
+      "user": 1,
+      "content_type": 23,
+      "object_id": "1",
+      "object_repr": "Участник",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-02-12T13:13:19.781Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "1",
+      "object_repr": "Дата начала: 02/10/2023 Дата конца: 02/01/2026: Обычный Студент Первый (Участник)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-02-12T14:44:26.202Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "1",
+      "object_repr": "Сертификат",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-02-12T14:45:41.978Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "1",
+      "object_repr": "\"Тестовое мероприятие: 2024 Февраль\": Обычный Студент Первый (Участник) - Сертификат",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-02-12T14:45:59.401Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "2",
+      "object_repr": "\"Тестовое мероприятие: 2024 Февраль\": Обычный Студент Первый (Участник) - Сертификат",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-02-12T16:11:04.974Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "1",
+      "object_repr": "\"Тестовое мероприятие: 2024 Февраль\": Обычный Студент Первый (Участник)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-02-12T16:11:14.564Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "2",
+      "object_repr": "\"Час Юнеско: 2025 Август\": Обычный Студент Второй (Участник)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-02-12T16:12:07.574Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "3",
+      "object_repr": "\"Час Юнеско: 2025 Август\": Обычный Студент Второй (Участник) - Сертификат",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-02-12T16:12:12.128Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "2",
+      "object_repr": "\"Час Юнеско: 2025 Август\": Обычный Студент Второй (Участник)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-02-12T16:14:07.885Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "2",
+      "object_repr": "\"Тестовое мероприятие: 2024 Февраль\": Обычный Студент Первый (Участник) - Сертификат",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-02-12T16:23:24.931Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "3",
+      "object_repr": "\"Тестовое мероприятие: 2023 Февраль\": Обычный Студент Первый (Участник)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-02-12T16:31:20.444Z",
+      "user": 1,
+      "content_type": 23,
+      "object_id": "2",
+      "object_repr": "Организатор",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-02-12T16:31:21.611Z",
+      "user": 1,
+      "content_type": 24,
+      "object_id": "4",
+      "object_repr": "\"Тестовое мероприятие: 2022 Ноябрь\": Обычный Студент Второй (Организатор)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-02-12T16:31:38.854Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "2",
+      "object_repr": "Федерация Призер (55)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-02-12T16:31:43.722Z",
+      "user": 1,
+      "content_type": 25,
+      "object_id": "3",
+      "object_repr": "\"Тестовое мероприятие: 2022 Ноябрь\": Обычный Студент Второй (Организатор) - Сертификат",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0430\\u0441\\u0442\\u0438\\u0435\", \"\\u0414\\u043e\\u0441\\u0442\\u0438\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add event type",
+      "content_type": 7,
+      "codename": "add_eventtype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change event type",
+      "content_type": 7,
+      "codename": "change_eventtype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete event type",
+      "content_type": 7,
+      "codename": "delete_eventtype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view event type",
+      "content_type": 7,
+      "codename": "view_eventtype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add event level",
+      "content_type": 8,
+      "codename": "add_eventlevel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change event level",
+      "content_type": 8,
+      "codename": "change_eventlevel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete event level",
+      "content_type": 8,
+      "codename": "delete_eventlevel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view event level",
+      "content_type": 8,
+      "codename": "view_eventlevel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add month",
+      "content_type": 9,
+      "codename": "add_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change month",
+      "content_type": 9,
+      "codename": "change_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete month",
+      "content_type": 9,
+      "codename": "delete_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view month",
+      "content_type": 9,
+      "codename": "view_month"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add event",
+      "content_type": 10,
+      "codename": "add_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change event",
+      "content_type": 10,
+      "codename": "change_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete event",
+      "content_type": 10,
+      "codename": "delete_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view event",
+      "content_type": 10,
+      "codename": "view_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add plan",
+      "content_type": 11,
+      "codename": "add_plan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change plan",
+      "content_type": 11,
+      "codename": "change_plan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete plan",
+      "content_type": 11,
+      "codename": "delete_plan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view plan",
+      "content_type": 11,
+      "codename": "view_plan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add shedule",
+      "content_type": 12,
+      "codename": "add_shedule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change shedule",
+      "content_type": 12,
+      "codename": "change_shedule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete shedule",
+      "content_type": 12,
+      "codename": "delete_shedule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view shedule",
+      "content_type": 12,
+      "codename": "view_shedule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add report",
+      "content_type": 13,
+      "codename": "add_report"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change report",
+      "content_type": 13,
+      "codename": "change_report"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete report",
+      "content_type": 13,
+      "codename": "delete_report"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view report",
+      "content_type": 13,
+      "codename": "view_report"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add report image",
+      "content_type": 14,
+      "codename": "add_reportimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change report image",
+      "content_type": 14,
+      "codename": "change_reportimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete report image",
+      "content_type": 14,
+      "codename": "delete_reportimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view report image",
+      "content_type": 14,
+      "codename": "view_reportimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add curator",
+      "content_type": 15,
+      "codename": "add_curator"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change curator",
+      "content_type": 15,
+      "codename": "change_curator"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete curator",
+      "content_type": 15,
+      "codename": "delete_curator"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view curator",
+      "content_type": 15,
+      "codename": "view_curator"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 16,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 16,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 16,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 16,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add specialization",
+      "content_type": 17,
+      "codename": "add_specialization"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change specialization",
+      "content_type": 17,
+      "codename": "change_specialization"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete specialization",
+      "content_type": 17,
+      "codename": "delete_specialization"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view specialization",
+      "content_type": 17,
+      "codename": "view_specialization"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add student",
+      "content_type": 18,
+      "codename": "add_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change student",
+      "content_type": 18,
+      "codename": "change_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete student",
+      "content_type": 18,
+      "codename": "delete_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view student",
+      "content_type": 18,
+      "codename": "view_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add message",
+      "content_type": 19,
+      "codename": "add_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change message",
+      "content_type": 19,
+      "codename": "change_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete message",
+      "content_type": 19,
+      "codename": "delete_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view message",
+      "content_type": 19,
+      "codename": "view_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add nomination",
+      "content_type": 20,
+      "codename": "add_nomination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change nomination",
+      "content_type": 20,
+      "codename": "change_nomination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete nomination",
+      "content_type": 20,
+      "codename": "delete_nomination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view nomination",
+      "content_type": 20,
+      "codename": "view_nomination"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Can add achievement",
+      "content_type": 21,
+      "codename": "add_achievement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Can change achievement",
+      "content_type": 21,
+      "codename": "change_achievement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Can delete achievement",
+      "content_type": 21,
+      "codename": "delete_achievement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Can view achievement",
+      "content_type": 21,
+      "codename": "view_achievement"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "name": "Can add document type",
+      "content_type": 22,
+      "codename": "add_documenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "name": "Can change document type",
+      "content_type": 22,
+      "codename": "change_documenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "name": "Can delete document type",
+      "content_type": 22,
+      "codename": "delete_documenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "name": "Can view document type",
+      "content_type": 22,
+      "codename": "view_documenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "name": "Can add event role",
+      "content_type": 23,
+      "codename": "add_eventrole"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "name": "Can change event role",
+      "content_type": 23,
+      "codename": "change_eventrole"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "name": "Can delete event role",
+      "content_type": 23,
+      "codename": "delete_eventrole"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "name": "Can view event role",
+      "content_type": 23,
+      "codename": "view_eventrole"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+      "name": "Can add activity",
+      "content_type": 24,
+      "codename": "add_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+      "name": "Can change activity",
+      "content_type": 24,
+      "codename": "change_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+      "name": "Can delete activity",
+      "content_type": 24,
+      "codename": "delete_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+      "name": "Can view activity",
+      "content_type": 24,
+      "codename": "view_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+      "name": "Can add document",
+      "content_type": 25,
+      "codename": "add_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+      "name": "Can change document",
+      "content_type": 25,
+      "codename": "change_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+      "name": "Can delete document",
+      "content_type": 25,
+      "codename": "delete_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "name": "Can view document",
+      "content_type": 25,
+      "codename": "view_document"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "Модераторы",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$GPj81dO58psMKiQFMNyeeP$otIp3iFN3dReYDPURyrXz7fdSH7fds3C7d9xu2qRwnM=",
+      "last_login": "2023-02-12T23:52:24.096Z",
+      "is_superuser": true,
+      "username": "mikan",
+      "first_name": "Админ",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-02-10T15:28:56Z",
+      "groups": [],
+      "user_permissions": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        37,
+        38,
+        39,
+        40,
+        29,
+        30,
+        31,
+        32,
+        25,
+        26,
+        27,
+        28,
+        33,
+        34,
+        35,
+        36,
+        41,
+        42,
+        43,
+        44,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        45,
+        46,
+        47,
+        48,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$Rj7O4FrCAjte6NKJPo3yvG$OMVnG0s1GtcewAcdrDqMkpnsl2x+YzkPSn7iQu1ewLI=",
+      "last_login": "2023-02-12T23:53:06.993Z",
+      "is_superuser": false,
+      "username": "ОСтудент1",
+      "first_name": "Обычный Студент Первый",
+      "last_name": "",
+      "email": "example@ex.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-02-11T13:31:53Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$wiLV6V2HRnGrx1CmWLx1Rt$eTC+pBm5A5W5A44PH38hKXV2KzWt3lfY0ekGLhE2Hck=",
+      "last_login": "2023-02-12T23:53:18.193Z",
+      "is_superuser": false,
+      "username": "ОСтудент2",
+      "first_name": "Обычный Студент Второй",
+      "last_name": "",
+      "email": "example@ex.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-02-11T13:40:58Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "events",
+      "model": "eventtype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "events",
+      "model": "eventlevel"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "events",
+      "model": "month"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "events",
+      "model": "event"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "events",
+      "model": "plan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "events",
+      "model": "shedule"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "events",
+      "model": "report"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "events",
+      "model": "reportimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "users",
+      "model": "curator"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "users",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "users",
+      "model": "specialization"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "users",
+      "model": "student"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "appeals",
+      "model": "message"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "nomination"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "achievement"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "documenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "eventrole"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "activity"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": {
+      "app_label": "portfolio",
+      "model": "document"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "0432mardobr7ihigi77lv7pnqtb8gvqc",
+    "fields": {
+      "session_data": ".eJxVjM0OwiAQhN-FsyHLP_Xo3Wcgy4JSNZCU9mR8d2nSgyZzmZlv5s0CbmsJW89LmBM7M8FOv1lEeua6F-mB9d44tbouc-Q7wo-282tL-XU52L-Dgr2MtUN9U8JbCQSOdELtnVAxKmn8JAmMUNmBAysINA5imCmZoQTSgGWfL7FHNkA:1pRBv1:DE3Njho2RHIQiZlyPubqpKQfLs2uKCXKbc3OMCwwTPg",
+      "expire_date": "2023-02-26T12:57:23.387Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mcpg6gsjfek2fw976auq0mxaakl6oabx",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAKDBSX7j0DGRhGqoYmpV0Z765NutDtf-_9l4i4rTVuvSxxInEWRpx-t4T5UdoO6I7tNss8t3WZktwVedAurzOV5-Vw_w4q9vqt2RZvHAOkAVlTDqNhxcFDIlYwqKAzegSgMELSoCwQoLOKrSFwKov3B-rwN6g:1pRM9m:ftkJK3QzeejMp2xI9xkw1nhAmA4dunGuhmcZeEea0vk",
+      "expire_date": "2023-02-26T23:53:18.236Z"
+    }
+  },
+  {
+    "model": "events.eventtype",
+    "pk": 1,
+    "fields": {
+      "title": "Квест"
+    }
+  },
+  {
+    "model": "events.eventtype",
+    "pk": 2,
+    "fields": {
+      "title": "Квиз"
+    }
+  },
+  {
+    "model": "events.eventtype",
+    "pk": 3,
+    "fields": {
+      "title": "Олимпиада"
+    }
+  },
+  {
+    "model": "events.eventtype",
+    "pk": 4,
+    "fields": {
+      "title": "Мастер-класс"
+    }
+  },
+  {
+    "model": "events.eventtype",
+    "pk": 5,
+    "fields": {
+      "title": "Субботник"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 1,
+    "fields": {
+      "title": "Колледж"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 2,
+    "fields": {
+      "title": "Город"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 3,
+    "fields": {
+      "title": "Республика"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 4,
+    "fields": {
+      "title": "Регион"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 5,
+    "fields": {
+      "title": "Федерация"
+    }
+  },
+  {
+    "model": "events.eventlevel",
+    "pk": 6,
+    "fields": {
+      "title": "Международный"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "title": "Тестовое мероприятие",
+      "description": "Бла бла бла",
+      "event_type": 3,
+      "event_level": 4,
+      "weorg": false
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "title": "Час Юнеско",
+      "description": "Что-то о часах и юнеско",
+      "event_type": 1,
+      "event_level": 1,
+      "weorg": true
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 1,
+    "fields": {
+      "title": "Январь"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 2,
+    "fields": {
+      "title": "Февраль"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 3,
+    "fields": {
+      "title": "Март"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 4,
+    "fields": {
+      "title": "Апрель"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 5,
+    "fields": {
+      "title": "Май"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 6,
+    "fields": {
+      "title": "Июнь"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 7,
+    "fields": {
+      "title": "Июль"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 8,
+    "fields": {
+      "title": "Август"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 9,
+    "fields": {
+      "title": "Сентябрь"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 10,
+    "fields": {
+      "title": "Октябрь"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 11,
+    "fields": {
+      "title": "Ноябрь"
+    }
+  },
+  {
+    "model": "events.month",
+    "pk": 12,
+    "fields": {
+      "title": "Декабрь"
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 3,
+    "fields": {
+      "event": 1,
+      "month": 2,
+      "year": 2023
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 4,
+    "fields": {
+      "event": 1,
+      "month": 2,
+      "year": 2024
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 5,
+    "fields": {
+      "event": 2,
+      "month": 3,
+      "year": 2023
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 6,
+    "fields": {
+      "event": 1,
+      "month": 2,
+      "year": 2023
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 7,
+    "fields": {
+      "event": 2,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 8,
+    "fields": {
+      "event": 1,
+      "month": 11,
+      "year": 2022
+    }
+  },
+  {
+    "model": "events.plan",
+    "pk": 9,
+    "fields": {
+      "event": 1,
+      "month": 9,
+      "year": 2024
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 3,
+    "fields": {
+      "plan": 3,
+      "begin": "2023-02-10",
+      "end": "2023-06-10"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 4,
+    "fields": {
+      "plan": 4,
+      "begin": "2023-02-10",
+      "end": "2026-02-01"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 5,
+    "fields": {
+      "plan": 5,
+      "begin": "2023-03-01",
+      "end": "2023-03-01"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 6,
+    "fields": {
+      "plan": 6,
+      "begin": "2023-02-10",
+      "end": "2023-02-14"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 7,
+    "fields": {
+      "plan": 7,
+      "begin": "2025-08-01",
+      "end": "2025-08-01"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 8,
+    "fields": {
+      "plan": 8,
+      "begin": "2023-02-11",
+      "end": "2023-02-11"
+    }
+  },
+  {
+    "model": "events.shedule",
+    "pk": 9,
+    "fields": {
+      "plan": 9,
+      "begin": "2023-01-01",
+      "end": "2024-09-01"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 1,
+    "fields": {
+      "title": "Отчет о работе",
+      "shedule": 3,
+      "content": "Современные технологии достигли такого уровня, что сложившаяся структура организации способствует повышению качества распределения внутренних резервов и ресурсов. Также как перспективное планирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры создаёт предпосылки для своевременного выполнения сверхзадачи. Внезапно, сторонники тоталитаризма в науке являются только методом политического участия и ассоциативно распределены по отраслям. Значимость этих проблем настолько очевидна, что существующая теория является качественно новой ступенью кластеризации усилий. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов представляет собой интересный эксперимент проверки вывода текущих активов. Есть над чем задуматься: стремящиеся вытеснить традиционное производство, нанотехнологии лишь добавляют фракционных разногласий и разоблачены! Предварительные выводы неутешительны: высокое качество позиционных исследований в значительной степени обусловливает важность новых принципов формирования материально-технической и кадровой базы.",
+      "created_at": "2023-02-11T08:29:44.319Z",
+      "edited_at": "2023-02-11T09:53:01.926Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 2,
+    "fields": {
+      "title": "Тестовое мероприятие: 2023 Февраль",
+      "shedule": 3,
+      "content": "1351912 г9012 1лр2д3 рш12р оил123 оиёшг3 ишгёиор ёро1мё1 3ори рё1и 3и1ё3и 12ир 3иёор12и 3дриё3 ирё3др и1др23и дё1 ё1 3ирёо13 дри1ё 3рир12иё3р и13ри р1ёор3 мё1ром 3ё13м р1ё3о м12м3 1ёморм3 о12рм р12 3мр1ё м3ормдё1о 3м1ро2м 3",
+      "created_at": "2023-02-10T22:51:37.444Z",
+      "edited_at": "2023-02-11T09:51:52.296Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 3,
+    "fields": {
+      "title": "Однозначно, базовые сценарии поведения пользов: 2023 Февраль",
+      "shedule": 3,
+      "content": "Однозначно, базовые сценарии поведения пользователей в равной степени предоставлены сами себе. В рамках спецификации современных стандартов, акционеры крупнейших компаний, инициированные исключительно синтетически, своевременно верифицированы. Вот вам яркий пример современных тенденций — новая модель организационной деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. Но синтетическое тестирование однозначно фиксирует необходимость экономической целесообразности принимаемых решений. В целом, конечно, семантический разбор внешних противодействий представляет собой интересный эксперимент проверки кластеризации усилий. Вот вам яркий пример современных тенденций — сплочённость команды профессионалов прекрасно подходит для реализации экспериментов, поражающих по своей масштабности и грандиозности. Безусловно, начало повседневной работы по формированию позиции не оставляет шанса для стандартных подходов. Равным образом, социально-экономическое развитие влечет за собой процесс внедрения и модернизации распределения внутренних резервов и ресурсов. С другой стороны, курс на социально-ориентированный национальный проект выявляет срочную потребность кластеризации усилий.",
+      "created_at": "2023-02-10T22:49:56.492Z",
+      "edited_at": "2023-02-11T14:15:46.405Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 4,
+    "fields": {
+      "title": "Час Юнеско: 2023 Март",
+      "shedule": 5,
+      "content": "Противоположная точка зрения подразумевает, что элементы политического процесса могут быть указаны как претенденты на роль ключевых факторов. Принимая во внимание показатели успешности, постоянный количественный рост и сфера нашей активности позволяет выполнить важные задания по разработке первоочередных требований. А ещё акционеры крупнейших компаний и по сей день остаются уделом либералов, которые жаждут быть ограничены исключительно образом мышления. Имеется спорная точка зрения, гласящая примерно следующее: базовые сценарии поведения пользователей освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок! Повседневная практика показывает, что высокое качество позиционных исследований однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Идейные соображения высшего порядка, а также высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации. С учётом сложившейся международной обстановки, внедрение современных методик однозначно фиксирует необходимость форм воздействия. Сложно сказать, почему предприниматели в сети интернет неоднозначны и будут указаны как претенденты на роль ключевых факторов. Ясность нашей позиции очевидна: постоянный количественный рост и сфера нашей активности является качественно новой ступенью инновационных методов управления процессами.",
+      "created_at": "2023-02-11T12:46:55.131Z",
+      "edited_at": "2023-02-11T12:46:55.131Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 5,
+    "fields": {
+      "title": "Час Юнеско: 2025 Август",
+      "shedule": 7,
+      "content": "В целом, конечно, дальнейшее развитие различных форм деятельности требует от нас анализа благоприятных перспектив. Таким образом, понимание сути ресурсосберегающих технологий создаёт предпосылки для модели развития. Картельные сговоры не допускают ситуации, при которой акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Предварительные выводы неутешительны: сложившаяся структура организации позволяет выполнить важные задания по разработке экономической целесообразности принимаемых решений. Ясность нашей позиции очевидна: социально-экономическое развитие позволяет выполнить важные задания по разработке поставленных обществом задач! Господа, постоянное информационно-пропагандистское обеспечение нашей деятельности требует от нас анализа прогресса профессионального сообщества. С другой стороны, повышение уровня гражданского сознания предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Принимая во внимание показатели успешности, семантический разбор внешних противодействий не даёт нам иного выбора, кроме определения соответствующих условий активизации. А также активно развивающиеся страны третьего мира разоблачены.",
+      "created_at": "2023-02-11T14:18:38.424Z",
+      "edited_at": "2023-02-11T14:18:38.424Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 6,
+    "fields": {
+      "title": "Час Юнеско: 2023 Март",
+      "shedule": 5,
+      "content": "123123123",
+      "created_at": "2023-02-11T16:39:31.621Z",
+      "edited_at": "2023-02-11T16:39:31.621Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 7,
+    "fields": {
+      "title": "Час Юнеско: 2023 Март",
+      "shedule": 5,
+      "content": "112124ubdhb 1hj el1h2",
+      "created_at": "2023-02-11T16:39:44.045Z",
+      "edited_at": "2023-02-11T16:39:44.045Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 8,
+    "fields": {
+      "title": "Главный отчет",
+      "shedule": 9,
+      "content": "Как принято считать, ключевые особенности структуры проекта, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Есть над чем задуматься: диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Внезапно, активно развивающиеся страны третьего мира смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Таким образом, сложившаяся структура организации играет определяющее значение для благоприятных перспектив. И нет сомнений, что действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений!",
+      "created_at": "2023-02-11T18:40:13.659Z",
+      "edited_at": "2023-02-11T18:55:46.966Z"
+    }
+  },
+  {
+    "model": "events.report",
+    "pk": 9,
+    "fields": {
+      "title": "Тестовое мероприятие: 2023 Февраль",
+      "shedule": 3,
+      "content": "yewtgnmfhhnf hynd",
+      "created_at": "2023-02-12T03:12:56.608Z",
+      "edited_at": "2023-02-12T03:12:56.608Z"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 7,
+    "fields": {
+      "report": 1,
+      "image": "reports/2023/02/11/ER2.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 9,
+    "fields": {
+      "report": 1,
+      "image": "reports/2023/02/11/ER3_OjTYGS9.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 10,
+    "fields": {
+      "report": 1,
+      "image": "reports/2023/02/11/Участие_gAIFerV.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 11,
+    "fields": {
+      "report": 1,
+      "image": "reports/2023/02/11/Mikan_avatar_5k_m.webp"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 12,
+    "fields": {
+      "report": 4,
+      "image": "reports/2023/02/11/15490419788540.jpg"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 13,
+    "fields": {
+      "report": 5,
+      "image": "reports/2023/02/11/15490432942390.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 14,
+    "fields": {
+      "report": 7,
+      "image": "reports/2023/02/11/ER_nHXKsVT.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 15,
+    "fields": {
+      "report": 8,
+      "image": "reports/2023/02/11/ER3_4RU0Uyn.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 16,
+    "fields": {
+      "report": 8,
+      "image": "reports/2023/02/11/Участие_G28dOwI.png"
+    }
+  },
+  {
+    "model": "events.reportimage",
+    "pk": 17,
+    "fields": {
+      "report": 8,
+      "image": "reports/2023/02/11/ER_V6Innt9.png"
+    }
+  },
+  {
+    "model": "portfolio.nomination",
+    "pk": 1,
+    "fields": {
+      "title": "Победитель"
+    }
+  },
+  {
+    "model": "portfolio.nomination",
+    "pk": 2,
+    "fields": {
+      "title": "Призер"
+    }
+  },
+  {
+    "model": "portfolio.nomination",
+    "pk": 3,
+    "fields": {
+      "title": "Участник"
+    }
+  },
+  {
+    "model": "portfolio.achievement",
+    "pk": 1,
+    "fields": {
+      "event_level": 1,
+      "nomination": 1,
+      "score": 10
+    }
+  },
+  {
+    "model": "portfolio.achievement",
+    "pk": 2,
+    "fields": {
+      "event_level": 5,
+      "nomination": 2,
+      "score": 55
+    }
+  },
+  {
+    "model": "portfolio.eventrole",
+    "pk": 1,
+    "fields": {
+      "title": "Участник"
+    }
+  },
+  {
+    "model": "portfolio.eventrole",
+    "pk": 2,
+    "fields": {
+      "title": "Организатор"
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 1,
+    "fields": {
+      "shedule": 4,
+      "student": 1,
+      "event_role": 1
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 4,
+    "fields": {
+      "shedule": 8,
+      "student": 2,
+      "event_role": 2
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 11,
+    "fields": {
+      "shedule": 3,
+      "student": 2,
+      "event_role": 2
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 12,
+    "fields": {
+      "shedule": 3,
+      "student": 1,
+      "event_role": 1
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 13,
+    "fields": {
+      "shedule": 3,
+      "student": 2,
+      "event_role": 1
+    }
+  },
+  {
+    "model": "portfolio.activity",
+    "pk": 14,
+    "fields": {
+      "shedule": 3,
+      "student": 1,
+      "event_role": 2
+    }
+  },
+  {
+    "model": "portfolio.documenttype",
+    "pk": 1,
+    "fields": {
+      "title": "Сертификат"
+    }
+  },
+  {
+    "model": "portfolio.document",
+    "pk": 1,
+    "fields": {
+      "activity": 1,
+      "document_type": 1,
+      "image": "portfolio/1/9ee46506bd53c89e54168568c0ed9c196c9f7f71_s2_n1.jpg",
+      "achievement": 1,
+      "added_date": "2023-02-12T14:45:41.973Z"
+    }
+  },
+  {
+    "model": "portfolio.document",
+    "pk": 3,
+    "fields": {
+      "activity": 4,
+      "document_type": 1,
+      "image": "portfolio/2/макет_грамоты.png",
+      "achievement": 2,
+      "added_date": "2023-02-12T16:12:07.570Z"
+    }
+  },
+  {
+    "model": "portfolio.document",
+    "pk": 4,
+    "fields": {
+      "activity": 4,
+      "document_type": 1,
+      "image": "portfolio/2/макет_грамоты_7xTikV2.png",
+      "achievement": 1,
+      "added_date": "2023-02-12T23:38:11.721Z"
+    }
+  },
+  {
+    "model": "portfolio.document",
+    "pk": 5,
+    "fields": {
+      "activity": 4,
+      "document_type": 1,
+      "image": "portfolio/2/макет_грамоты_d4SfExO.png",
+      "achievement": 1,
+      "added_date": "2023-02-12T23:39:26.751Z"
+    }
+  },
+  {
+    "model": "users.specialization",
+    "pk": 1,
+    "fields": {
+      "title": "Информационные системы и программирование",
+      "code": "09.02.07"
+    }
+  },
+  {
+    "model": "users.specialization",
+    "pk": 2,
+    "fields": {
+      "title": "Логисты",
+      "code": "09.02.07"
+    }
+  },
+  {
+    "model": "users.curator",
+    "pk": 1,
+    "fields": {
+      "FIO": "Стандартный Преподаватель Первый",
+      "number": "+88005553535",
+      "email": "example@ex.com"
+    }
+  },
+  {
+    "model": "users.curator",
+    "pk": 2,
+    "fields": {
+      "FIO": "Стандартный Преподаватель Второй",
+      "number": "+88005553535",
+      "email": "example@ex.com"
+    }
+  },
+  {
+    "model": "users.group",
+    "pk": 1,
+    "fields": {
+      "title": "ИС201/2",
+      "specialization": 1,
+      "curator": 1
+    }
+  },
+  {
+    "model": "users.group",
+    "pk": 2,
+    "fields": {
+      "title": "Л211/2",
+      "specialization": 2,
+      "curator": 2
+    }
+  },
+  {
+    "model": "users.student",
+    "pk": 1,
+    "fields": {
+      "group": 1,
+      "birthday": "2001-04-11",
+      "number": "+78005553531",
+      "user": 2,
+      "image": "students/2b_nier_14.jpg"
+    }
+  },
+  {
+    "model": "users.student",
+    "pk": 2,
+    "fields": {
+      "group": 2,
+      "birthday": "2003-02-11",
+      "number": "+78005553535",
+      "user": 3,
+      "image": "students/2b_nier_7.jpg"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "content": "Разнообразный и богатый опыт говорит нам, что укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение глубокомысленных рассуждений. Задача организации, в особенности же внедрение современных методик влечет за собой процесс внедрения и модернизации стандартных подходов. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования являются только методом политического участия и смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Ясность нашей позиции очевидна: внедрение современных методик представляет собой интересный эксперимент проверки кластеризации усилий. Равным образом, семантический разбор внешних противодействий способствует повышению качества своевременного выполнения сверхзадачи.",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T20:45:34.955Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "content": "А также явные признаки победы институционализации будут объявлены нарушающими общечеловеческие нормы этики и морали. Внезапно, непосредственные участники технического прогресса могут быть объединены в целые кластеры себе подобных. Ясность нашей позиции очевидна: экономическая повестка сегодняшнего дня требует определения и уточнения своевременного выполнения сверхзадачи! В своём стремлении повысить качество жизни, они забывают, что убеждённость некоторых оппонентов не оставляет шанса для своевременного выполнения сверхзадачи. Ясность нашей позиции очевидна: начало повседневной работы по формированию позиции предоставляет широкие возможности для форм воздействия.",
+      "by_moderator": true,
+      "sended_at": "2023-02-11T20:45:53.553Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "content": "Сложно сказать, почему активно развивающиеся страны третьего мира и по сей день остаются уделом либералов, которые жаждут быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Задача организации, в особенности же консультация с широким активом обеспечивает актуальность распределения внутренних резервов и ресурсов. Являясь всего лишь частью общей картины, предприниматели в сети интернет формируют глобальную экономическую сеть и при этом — функционально разнесены на независимые элементы. Также как курс на социально-ориентированный национальный проект предопределяет высокую востребованность системы обучения кадров, соответствующей насущным потребностям. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира описаны максимально подробно.",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T20:48:13.872Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "content": "test",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T21:58:03.401Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "content": "Тест",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:01:55.115Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 6,
+    "fields": {
+      "user": 2,
+      "content": "123123",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:03:06.273Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 7,
+    "fields": {
+      "user": 2,
+      "content": "123123",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:03:08.965Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "content": "124124124",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:03:14.519Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 9,
+    "fields": {
+      "user": 2,
+      "content": "124124124",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:09:18.081Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 10,
+    "fields": {
+      "user": 2,
+      "content": "124124124",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:09:19.488Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 11,
+    "fields": {
+      "user": 2,
+      "content": "124124124",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:09:28.699Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 12,
+    "fields": {
+      "user": 2,
+      "content": "124124124",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:09:36.893Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 13,
+    "fields": {
+      "user": 2,
+      "content": "test",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:09:46.763Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 14,
+    "fields": {
+      "user": 1,
+      "content": "sd",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:20:06.357Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 15,
+    "fields": {
+      "user": 1,
+      "content": "sd",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:23:39.618Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 16,
+    "fields": {
+      "user": 1,
+      "content": "sd",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:23:46.601Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 17,
+    "fields": {
+      "user": 1,
+      "content": "sd",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:25:25.804Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 18,
+    "fields": {
+      "user": 1,
+      "content": "123123",
+      "by_moderator": false,
+      "sended_at": "2023-02-11T22:25:38.359Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 19,
+    "fields": {
+      "user": 1,
+      "content": "Yeas",
+      "by_moderator": true,
+      "sended_at": "2023-02-11T22:36:55.079Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 20,
+    "fields": {
+      "user": 1,
+      "content": "1231312",
+      "by_moderator": true,
+      "sended_at": "2023-02-12T16:17:53.627Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 21,
+    "fields": {
+      "user": 1,
+      "content": "1231312",
+      "by_moderator": true,
+      "sended_at": "2023-02-12T16:18:45.855Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 22,
+    "fields": {
+      "user": 2,
+      "content": "Yeas",
+      "by_moderator": true,
+      "sended_at": "2023-02-12T16:19:48.570Z"
+    }
+  },
+  {
+    "model": "appeals.message",
+    "pk": 23,
+    "fields": {
+      "user": 1,
+      "content": "123",
+      "by_moderator": false,
+      "sended_at": "2023-02-12T16:19:57.955Z"
+    }
+  }
+]

@@ -4,8 +4,10 @@ from .models import *
 
 
 def get_all_years():
-    return sorted({i['year'] for i in Plan.objects.all().values('year')})
-
+    try:
+        return sorted({i['year'] for i in Plan.objects.all().values('year')})
+    except:
+        return []
 
 # def get_all_years():
 #     return sorted({i for i in Plan.objects.all().values('year')})
@@ -16,7 +18,10 @@ def get_all_months_str():
 
 
 def get_all_months():
-    return sorted({i['month_id'] for i in Plan.objects.all().values('month_id')})
+    try:
+        return sorted({i['month_id'] for i in Plan.objects.all().values('month_id')})
+    except:
+        return []
 
 
 def int_choices(__iter):
