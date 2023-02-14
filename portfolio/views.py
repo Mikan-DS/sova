@@ -13,7 +13,17 @@ def generator(request):
 
 
 def raiting(request):
-    return render(request, 'events/inprogress.html')
+    students = {std: 0 for std in Student.objects.all()}
+    for std in students.keys():
+        students[std] = sum(i['achievement__score'] for i in Document.objects.filter(activity__student=std).values('achievement__score'))
+
+    def sorter(item):
+        return item[1]
+
+    ratings = [(place+1, i, j) for place, (i, j) in enumerate(sorted(students.items(), key=sorter, reverse=True))]
+
+
+    return render(request, 'portfolio/raiting.html', {'ratings': ratings})
 
 @login_required
 def portfolio(request):
@@ -48,3 +58,6 @@ def edit_peoples_byhand(request, plan_id):
     if form.is_valid():
         print(Activity.objects.get_or_create(shedule=plan.shedule, student=form.cleaned_data['student'], event_role=form.cleaned_data['event_role']))
     return render(request, 'portfolio/add_byhand.html', {'plan_id': plan_id, 'activities': Activity.objects.filter(shedule__plan_id=plan_id), 'form': form})
+
+def achievement_wall(request):
+    return render(request, 'portfolio/achievement_wall.html', {'documents': Document.objects.filter(achievement__nomination_id__in=[1, 2])})

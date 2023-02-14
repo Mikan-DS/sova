@@ -10,9 +10,9 @@
 Общий
 <a href="/">Главная</a>
 <a href="{% url 'plans' %}">План мероприятий</a>
-<a href="{% url 'plans' %}">Q&A</a>
-<a href="{% url 'plans' %}">Стена достижений</a>
-<a href="{% url 'plans' %}">Сбор вторсырья</a>
+<a href="{% url 'FAQ' %}">Q&A</a>
+<a href="{% url 'achievement wall' %}">Стена достижений</a>
+<a href="{% url 'recyclables' %}">Сбор вторсырья</a>
 <hr>
 
 {% if request.user.is_staff %}
@@ -22,7 +22,7 @@
     <a href="{% url 'events' %}">Редактирование мероприятий</a>
     <a href="{% url 'appeals' %}">Обращения</a>
     <a href="{% url 'port_generator' %}">Генератор наградных документов</a>
-    <a href="{% url 'inprogress' %}">Вторсырье</a>
+{#    <a href="{% url 'inprogress' %}">Вторсырье</a>#}
 
 
     <hr>
@@ -30,7 +30,7 @@
 
 {% if request.user.is_authenticated %}
     Зарегистрированный пользователь: {{ request.user.username }}
-    <a href="#">Рейтинг</a>
+    <a href="{% url 'raiting' %}">Рейтинг</a>
     <a href="{% url 'profile' %}">Личный кабинет</a>
     <a href="{% url 'ask moderator' %}#autoScroll">Чат с модератором</a>
     <a href="{% url 'portfolio' %}">Портфолио</a>

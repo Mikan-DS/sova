@@ -1,0 +1,27 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{% url 'index' %}"><</a> Рейтинг</h1>
+
+
+
+    <table>
+        <tr>
+            <th>Место</th>
+            <th>ФИО</th>
+            <th>Количество баллов</th>
+        </tr>
+        {% for place, student, score in ratings %}
+
+        <tr>
+            <th>{{ place }}</th>
+            <th>{{ student }}</th>
+            <th>{{ score }}</th>
+        </tr>
+    {% endfor %}
+    </table>
+
+
+
+{% endblock %}

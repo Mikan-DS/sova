@@ -41,14 +41,17 @@
             <div class="container">
                 <div class="form">
                     <h2>Вход в аккаунт</h2>
+                    {{ forms.non_field_errors }}
                     <form action="{{ request.path }}?next={{ nextto }}" method="post">
                         {% csrf_token %}
                         <div class="inputBox">
 {#                            <input type="Text" placeholder="username">#}
+                            {{ forms.username.errors }}
                             {{ forms.username }}
                         </div>
                         <div class="inputBox">
 {#                            <input type="Password" placeholder="Password">#}
+                            {{ forms.password.errors }}
                             {{ forms.password }}
 
                         </div>
@@ -56,9 +59,9 @@
 {#                            <input type="Mail" placeholder="Mail">#}
 {#                        </div>#}
                         <div class="inputBox">
-                            <input type="submit" placeholder="login">
+                            <input type="submit" placeholder="login" value="Войти">
                         </div>
-                        <p class="forget"> Забыли пароль? <a href="#">Нажмите сюда</a></p>
+                        <p class="forget"> Забыли пароль? <a href="{% url 'inprogress' %}">Нажмите сюда</a></p>
 {#                        <p class="forget"> Don't have aan account? <a href="#">Sugn up</a></p>#}
                     </form>
 

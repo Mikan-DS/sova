@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'users.apps.UsersConfig',
     'appeals.apps.AppealsConfig',
+    'about.apps.AboutConfig',
+    'recyclables.apps.RecyclablesConfig'
 ]
 
 MIDDLEWARE = [

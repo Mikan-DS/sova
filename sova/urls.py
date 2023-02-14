@@ -26,7 +26,8 @@ urlpatterns = [
     path('', include('events.urls')),
     path('user/', include('users.urls')),
     path('appeals/', include('appeals.urls')),
-    path('portfolio/', include('portfolio.urls'))
+    path('portfolio/', include('portfolio.urls')),
+    path('about/', include('about.urls')),
 ]
 
 if settings.DEBUG:

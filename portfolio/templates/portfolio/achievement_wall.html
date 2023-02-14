@@ -1,0 +1,28 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+    <h1><a href="{% url 'index' %}"><</a> Стена достижений</h1>
+
+    {% for document in documents %}
+        <div><img src="{{ document.image.url }}" alt="{{ document }}"
+                  style="width: 15%;">
+            <ul>
+                {% if document.activity %}
+                    <li>С мероприятия: <a
+                            href="{{ document.activity.shedule.plan.get_absolute_url }}">{{ document.activity.shedule.plan }}</a>
+                    </li>
+
+                {% endif %}
+                <li>Тип документа: {{ document.document_type }}</li>
+                <li>Достижение: {{ document.achievement }}</li>
+                <li>Кто получил: {{ document.activity.student }}</li>
+                {#                <li>Дата добавления: {{ document.added_date }}</li>#}
+            </ul>
+        </div>
+        <br>
+    {% endfor %}
+
+
+
+{% endblock %}
