@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>Sova</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "events/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "events/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "events/favicon/favicon-16x16.png" %}">
+    <link rel="stylesheet" href="{% static 'events/css/index.css' %}">
+
+    {% block styles %}
+    {% endblock %}
+
+</head>
+<body>
+<header>
+    <a href="/"><img class="logo" src="{% static "events/images/logo.ico" %}" alt="Guardians Logo"></a>
+    <nav class="navigation">
+
+        <a href="/">Главная</a>
+        <a href="{% url 'plans' %}" {#class="active"#}>План мероприятий</a>
+        <a href="#">Для хранителя</a>
+
+        <a href="#">О нас</a>
+        <a href="#">Профиль</a>
+    </nav>
+</header>
+
+<section class="parallax">
+    <img src="{% static 'events/images/0.jpg' %}" id="hd1">
+
+
+    <h2 id="text">Хранители Мудрости</h2>
+</section>
+<section class="sec" id="main_content" style="color: white">
+    {% block content %}
+    {% endblock %}
+</section>
+</body>
+</html>

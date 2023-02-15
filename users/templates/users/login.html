@@ -41,7 +41,9 @@
             <div class="container">
                 <div class="form">
                     <h2>Вход в аккаунт</h2>
-                    {{ forms.non_field_errors }}
+                    {% for non_field_error in forms.non_field_errors %}
+                        <p class="error">{{ non_field_error }}</p>
+                    {% endfor %}
                     <form action="{{ request.path }}?next={{ nextto }}" method="post">
                         {% csrf_token %}
                         <div class="inputBox">
