@@ -40,6 +40,14 @@
 {#</head>#}
 {% block styles %}
     <link rel="stylesheet" href="{% static 'events/css/index.css' %}">
+    <style>
+        .navigation a{
+            font-size: 7px;
+            padding: 3px 8px;
+            margin: 0 0px;
+        }
+
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -49,10 +57,20 @@
 
         <a href="/">Главная</a>
         <a href="{% url 'plans' %}" {#class="active"#}>План мероприятий</a>
-        <a href="#">Для хранителя</a>
-
-        <a href="#">О нас</a>
-        <a href="#">Профиль</a>
+{#        <a href="#">Для хранителя</a>#}
+{##}
+{#        <a href="#">О нас</a>#}
+{#        <a href="#">Профиль</a>#}
+<a href="{% url 'FAQ' %}">Q&A</a>
+<a href="{% url 'achievement wall' %}">Стена достижений</a>
+<a href="{% url 'recyclables' %}">Сбор вторсырья</a>
+            <a href="{% url 'events' %}">Редактирование мероприятий</a>
+    <a href="{% url 'appeals' %}">Обращения</a>
+            <a href="{% url 'raiting' %}">Рейтинг</a>
+    <a href="{% url 'profile' %}">Личный кабинет</a>
+    <a href="{% url 'ask moderator' %}#autoScroll">Чат с модератором</a>
+    <a href="{% url 'portfolio' %}">Портфолио</a>
+    <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
     </nav>
 </header>
 <section class="parallax">
