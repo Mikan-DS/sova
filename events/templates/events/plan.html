@@ -2,10 +2,15 @@
 
 {% block content %}
 
-    <h1><a href="{{ plan.event.get_absolute_url }}"><</a> {{ plan }}</h1>
+    <a href="{% url 'event' event_id=plan.event_id %}#main_content" >
+        <div>К мероприятию</div>
+    </a>
+    <h1>{{ plan }}</h1>
 
     {% if request.user.is_staff %}
-        <a href="{% url 'edit plan' event_id=plan.event.pk plan_id=plan.pk %}">Редактировать</a>
+        <a href="{% url 'edit plan' event_id=plan.event.pk plan_id=plan.pk %}" class="specialbutton">
+            <div>Редактировать</div>
+        </a>
     {% endif %}
 
     <br>
@@ -33,7 +38,9 @@
             <li>
                 Задействовано людей: {{ people_count }}
             {% if request.user.is_staff %}
-                <a href="{% url 'change shedule students' plan_id=plan.pk %}">Изменить</a>
+                <a href="{% url 'change shedule students' plan_id=plan.pk %}" >
+                    Изменить
+                </a>
             {% endif %}
             </li>
         {% endif %}
@@ -49,7 +56,7 @@
         <br>
 
         {% if request.user.is_staff %}
-            <a href="{% url 'edit shedule' event_id=plan.event.pk plan_id=plan.pk %}"> Изменить</a>
+            <a href="{% url 'edit shedule' event_id=plan.event.pk plan_id=plan.pk %}" class="specialbutton"> <div>Изменить</div></a>
         {% endif %}
 
 

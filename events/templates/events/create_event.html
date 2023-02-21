@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1><a href="{% url 'events' %}"><</a> Создание мероприятия</h1>
+    <h1>Создание мероприятия</h1>
 
     <br>
 
@@ -12,6 +12,8 @@
         {{ form.as_p }}
 
         <button type="submit">Добавить</button>
+
+        <button onclick="location.href='{% url 'events' %}#main_content'">Отмена</button>
 
     </form>
 

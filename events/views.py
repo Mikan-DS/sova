@@ -13,7 +13,7 @@ from .utils import *
 
 def index(request):
 
-    reports = Report.objects.filter(created_at__gt=timezone.now()-datetime.timedelta(days=3)).order_by('created_at').reverse()[:3]
+    reports = Report.objects.all().order_by('created_at').reverse()[:3]
 
 
     return render(

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1><a href="{% url 'event' event_id=event_id %}"><</a> Редактирование мероприятия</h1>
+    <h1>Редактирование мероприятия</h1>
 
     <br>
 
@@ -12,9 +12,11 @@
         {{ form.as_p }}
 
         <button type="submit">Обновить</button>
+        <button onclick="location.href='{% url 'delete event' event_id=event_id %}'">Удалить</button>
+        <button onclick="location.href='{% url 'event' event_id=event_id %}#main_content'">Отмена</button>
 
     </form>
-    <button type="submit" onclick="location.href='{% url 'delete event' event_id=event_id %}'">Удалить</button>
+
 
 
 

@@ -4,4 +4,8 @@ from django import forms
 
 
 class WriteMessage(forms.Form):
-    content = forms.CharField(widget=forms.TextInput(attrs={'id': 'send_message_input'}))
+    content = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'id': 'send_message_input',
+            "autocomplete": "off"
+        }))

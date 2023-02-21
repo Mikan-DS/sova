@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from users.views import only_staff
 from .forms import *
 from .models import *
-from .utils import get_all_chats
+from .utils import get_all_chats, get_all_last_messages
 
 
 @login_required
@@ -30,7 +30,7 @@ def appeals(request):
         request,
         'appeals/all_chats.html',
         {
-            'chats': User.objects.filter(pk__in=get_all_chats())
+            'chats': get_all_last_messages()
         })
 @only_staff
 def answer_to_user(request, user_id):

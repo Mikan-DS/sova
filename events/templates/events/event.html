@@ -2,10 +2,19 @@
 
 {% block content %}
 
-    <h1><a href="{% url 'events' %}"><</a> {{ event }}</h1>
+    {% if request.user.is_staff %}
+    <a href="{% url 'events' %}#event_{{ event.pk }}" >
+        <div>К списку мероприятий</div>
+    </a>
+    {% endif %}
+    <h1>{{ event }}</h1>
 
     {% if request.user.is_staff %}
-        <a href="{% url 'edit event' event_id=event.pk %}">Редактировать</a>
+        <a href="{% url 'edit event' event_id=event.pk %}#main_content" class="specialbutton">
+            <div>
+                Редактировать
+            </div>
+        </a>
     {% endif %}
 
 
@@ -39,11 +48,15 @@
     <ul>
 
             {% if request.user.is_staff %}
-                <li><a href="{% url 'add plan' event_id=event.pk %}">Добавить план</a></li>
+                <li><a href="{% url 'add plan' event_id=event.pk %}#main_content" class="specialbutton">
+                    <div>
+                        Добавить план
+                    </div>
+                </a></li>
             {% endif %}
         {% for p in plans %}
             <li>
-                <a href="{{ p.get_absolute_url }}"><h3>{{ p }}</h3></a>
+                <a href="{{ p.get_absolute_url }}#main_content"><h3>{{ p }}</h3></a>
             </li>
         {% endfor %}
     </ul>

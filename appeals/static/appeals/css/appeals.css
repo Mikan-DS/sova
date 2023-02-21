@@ -1,0 +1,32 @@
+.chat{
+    text-decoration: none;
+    color: #166087;
+}
+
+.chat table{
+    border-radius: 6px;
+    background: #DAF1FF;
+    padding: 0.5% 3%;
+    border: #166087 medium groove;
+    width: 95%;
+
+}
+
+.chat td{
+    vertical-align: top;
+    /*border: red dashed medium;*/
+}
+
+.chat h3{
+    padding: 0;
+    margin: 0;
+}
+
+
+.rightoriented{
+    text-align: right;
+}
+
+.chatstatus{
+    color: red;
+}

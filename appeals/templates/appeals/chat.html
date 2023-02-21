@@ -2,31 +2,58 @@
 {% block chat %}
 
 
-    <div style="border: black dashed medium;
-                height:18rem;
-                width: 95%;
+    <div id="chatwindow">
 
-                overflow-y:auto;
-">
+{#        {% for message in messages %}#}
+{##}
+{#            <p>#}
+{#                <div>#}
+{#                    {% if message.by_moderator %}#}
+{#                        Хранитель#}
+{#                    {% else %}#}
+{#                        {{ message.user.first_name }}#}
+{#                    {% endif %}:#}
+{#                    ({{ message.sended_at }})#}
+{#                </div>#}
+{#            <br>#}
+{#                {{ message.content }}#}
+{#            </p>#}
+{#            <hr>#}
+{##}
+{#        {% endfor %}#}
 
         {% for message in messages %}
+            <table class="message
+{% if message.by_moderator %}
+    moderator
+{% else %}
+    student
+{% endif %}
+">
 
-            <p>
-                <div>
-                    {% if message.by_moderator %}
-                        Хранитель
-                    {% else %}
-                        {{ message.user.first_name }}
-                    {% endif %}:
-                    ({{ message.sended_at }})
-                </div>
-            <br>
-                {{ message.content }}
-            </p>
-            <hr>
-
+                <tr>
+                    <td>
+                        {{ message.content|linebreaks }}
+                   </td>
+                </tr>
+                <tr>
+                    <td class="rightoriented">
+                        {{ message.sended_at }}
+                    </td>
+                </tr>
+            </table>
         {% endfor %}
+
+
+
+
+
+
+
+
         <span id="autoScroll"></span>
     </div>
+
+
 
 {% endblock %}

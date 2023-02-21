@@ -1,0 +1,151 @@
+/**{*/
+/*    outline: #beff72 dashed medium;*/
+/*}*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+
+body{
+    background: #166087;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+header > img{
+    /*position: absolute;*/
+    /*position: relative;*/
+    width: 100%;
+    /*top: -1rem;*/
+    /*opacity: 40%;*/
+}
+
+
+a{
+    color: white;
+}
+
+.logos{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3%;
+}
+.logos > img{
+    width: 6%;
+}
+
+.navigation{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3%;
+    text-align: center;
+
+
+}
+
+ul{
+    list-style-type: none;
+
+}
+
+li{
+
+    text-align: left;
+}
+
+.navigation ul{
+    visibility: collapse;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.navigation a{
+    font-size: small;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+
+}
+
+.navigation > div > a{
+    font-size: x-large;
+    color: #166087;
+
+}
+
+
+.navigation > div
+{
+    color: #166087;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: x-large;
+
+    display: inline-block;
+    margin-left: 1rem;
+
+    vertical-align: top;
+
+
+}
+.navigation > div:hover{
+    color: white;
+    background: #166087;
+}
+.navigation > div:hover > ul{
+    visibility: visible;
+}
+.navigation > div:hover > a{
+    color: white;
+}
+
+header > h1{
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 3.3em;
+    color: #29a5c4;
+    text-shadow: 2px 2px 4px #FFFFFF33;
+    font-weight: bolder;
+    text-align: center;
+}
+
+section {
+    padding: 3%;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+}
+
+
+
+.specialbutton > div {
+    border-radius: 20px;
+    background: #DAF1FF;
+    width: fit-content;
+    padding: 1% 3%;
+}
+.specialbutton{
+    color: #166087;
+    text-decoration: none;
+    text-align: center;
+}
+
+input, textarea, select, button{
+    background: #DAF1FF;
+    border-radius: 4px;
+    color: #166087;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: large;
+}

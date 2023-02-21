@@ -1,20 +1,57 @@
 {% extends 'events/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'appeals/css/appeals.css' %}">
+{% endblock %}
 
 {% block content %}
 
 
-    <h1>Список всех студентов которые обратились</h1>
+    <h1>Чаты</h1>
     <br>
 
 
-    <ul>
-        {% for chat in chats %}
-            <li>
-                <a href="{% url 'answer user' user_id=chat.pk %}#autoScroll"><h3>{{ chat.first_name }}</h3></a>
+{#    <ul>#}
+{#        {% for chat in chats %}#}
+{#            <li>#}
+{#                <a href="{% url 'answer user' user_id=chat.pk %}#autoScroll"><h3>{{ chat.first_name }}</h3></a>#}
 {#            {% url 'answer user' user_id=chat.pk %}#}
-            </li>
-        {% endfor %}
-    </ul>
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+
+
+    {% for chat in chats %}
+        <a id="{{ chat.user.pk }}" href="{% url 'answer user' user_id=chat.user.pk %}#autoScroll" class="chat">
+
+            <table>
+                <tr>
+                    <td>
+                        <h3>{{ chat.user.first_name }} | {{ chat.user.student.group }}</h3>
+                    </td>
+                    <td class="rightoriented chatstatus">
+                        {% if not chat.by_moderator %}
+                            Ожидает ответа!
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        {{ chat.content|linebreaks|truncatewords:30 }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="chattime rightoriented" colspan="2">
+                        {{ chat.sended_at }}
+                    </td>
+                </tr>
+            </table>
+        </a>
+    {% endfor %}
+
+
+
 
 
 {% endblock %}

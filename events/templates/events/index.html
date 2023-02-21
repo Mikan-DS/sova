@@ -1,86 +1,13 @@
-{#{% extends 'events/base.html' %}#}
-{##}
-{#{% block content %}#}
-{##}
-{#    <h1>Хранители мудрости</h1>#}
-{#    Мы студенты колледжа «ТИСБИ».#}
-{#    С 1996 года наше учебное заведение является участником международного проекта#}
-{#    «Ассоциированные школы ЮНЕСКО". Благодаря этому в 2014 году сформировалась#}
-{#    команда творческих студентов-активистов «Хранители мудрости». Мы не только#}
-{#    получаем среднее профессиональное образование, но и учимся работать в команде.#}
-{##}
-{#    <br>#}
-{#    <hr>#}
-{##}
-{#    <h2>Последние события</h2>#}
-{#    <ul>#}
-{#    {% for r in reports %}#}
-{#        <li>#}
-{#            <a href="{% url 'report' report_id=r.pk %}">{{ r }}</a>#}
-{#            <h3>{{ r }}</h3>#}
-{#            <p>#}
-{#                {{ r.content|linebreaks|truncatewords:15 }}#}
-{#            </p>#}
-{#            <a href="{% url 'report' report_id=r.pk %}">Подробнее</a>#}
-{##}
-{#        </li>#}
-{#    {% endfor %}#}
-{#    </ul>#}
-{#{% endblock %}#}
-{% extends 'events/styledbase.html' %}
+{% extends 'events/base.html' %}
 {% load static %}
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
-{#    <title>zack</title>#}
-{#    <link rel="stylesheet" href="{% static 'events/css/index.css' %}">#}
-{#</head>#}
-{% block styles %}
-    <link rel="stylesheet" href="{% static 'events/css/index.css' %}">
-    <style>
-        .navigation a{
-            font-size: 7px;
-            padding: 3px 8px;
-            margin: 0 0px;
-        }
 
-    </style>
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'events/css/index.css' %}">
 {% endblock %}
 
 {% block content %}
-<header>
-    <a href="/"><img class="logo" src="{% static "events/images/logo.ico" %}" alt="Guardians Logo"></a>
-    <nav class="navigation">
 
-        <a href="/">Главная</a>
-        <a href="{% url 'plans' %}" {#class="active"#}>План мероприятий</a>
-{#        <a href="#">Для хранителя</a>#}
-{##}
-{#        <a href="#">О нас</a>#}
-{#        <a href="#">Профиль</a>#}
-<a href="{% url 'FAQ' %}">Q&A</a>
-<a href="{% url 'achievement wall' %}">Стена достижений</a>
-<a href="{% url 'recyclables' %}">Сбор вторсырья</a>
-            <a href="{% url 'events' %}">Редактирование мероприятий</a>
-    <a href="{% url 'appeals' %}">Обращения</a>
-            <a href="{% url 'raiting' %}">Рейтинг</a>
-    <a href="{% url 'profile' %}">Личный кабинет</a>
-    <a href="{% url 'ask moderator' %}#autoScroll">Чат с модератором</a>
-    <a href="{% url 'portfolio' %}">Портфолио</a>
-    <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
-    </nav>
-</header>
-<section class="parallax">
-    <img src="{% static 'events/images/0.jpg' %}" id="hd1">
-
-
-    <h2 id="text">Хранители Мудрости</h2>
-</section>
-<section class="sec">
-    <h2>Обращение от команды</h2>
+       <h2>Обращение от команды</h2>
     <p>
 
         -Добрый день, мы экологическая команда «Хранители Мудрости», студенты колледжа «ТИСБИ» и сегодня расскажем вам о
@@ -168,22 +95,30 @@
 
     </p>
 
+    <br>
+
         <h2>Последние события</h2>
-    <ul>
-    {% for r in reports %}
-        <li>
-            <a href="{% url 'report' report_id=r.pk %}">{{ r }}</a>
-            <h3>{{ r }}</h3>
-            <p>
-                {{ r.content|linebreaks|truncatewords:15 }}
-            </p>
-            <a href="{% url 'report' report_id=r.pk %}">Подробнее</a>
 
-        </li>
+    {% for report in reports %}
+        <table id="news">
+            <tr>
+                <td class="newsname"><h3>{{ report }}</h3></td>
+                <td class="opennews" rowspan="2">
+                    <a href="{% url 'report' report_id=report.pk %}" class="specialbutton">
+                        <div>
+                            Открыть новость
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="newsdescription">
+                    {{ report.content|linebreaks|truncatewords:30 }}
+                </td>
+            </tr>
+        </table>
     {% endfor %}
-    </ul>
 
-</section>
 
 
 

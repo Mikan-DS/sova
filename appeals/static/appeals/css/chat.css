@@ -1,0 +1,148 @@
+#chatname{
+    display: inline;
+}
+
+.specialbutton div{
+    display: inline;
+}
+
+#chatwindow{
+    margin: auto;
+    box-sizing: border-box;
+    background: #DAF1FF;
+    border: #2581B2 medium solid;
+    height:28rem;
+    width: 95%;
+
+    overflow-y:auto
+}
+
+.message{
+    border-radius: 6px;
+    background: #DAF1FF;
+    padding: 0.5% 3%;
+    border: #166087 medium groove;
+    /*width: 95%;*/
+    max-width: 90%;
+    min-width: 10%;
+    color: #166087;
+    margin: 1%;
+}
+
+.rightoriented{
+    text-align: right;
+}
+#send_message{
+    width: 95%;
+
+    margin: auto;
+
+}
+
+#send_message table{
+    width: 100%;
+}
+
+
+#send_message td{
+    /*border: red dashed medium;*/
+    height: 3rem;
+    padding: 0;
+    /*box-sizing: border-box;*/
+
+}
+
+#send_message_input_td{
+    width: auto;
+}
+#send_message_input{
+    width: 100%;
+    height: 3rem;
+    background: #DAF1FF;
+    border: #2581B2 medium solid;
+    resize: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#send_message_td{
+    width: 5%;
+    box-sizing: border-box;
+    height: 3rem;
+
+}
+
+#send_message_td button{
+    /*width: 100%;*/
+    /*height: 3rem;*/
+    /*background: #DAF1FF;*/
+    /*border: #2581B2 medium solid;*/
+    /*box-sizing: border-box;*/
+    /*margin: 0;*/
+    background: none;
+    border: none;
+    height: 100%;
+
+
+ }
+
+#send_message_td img{
+    height: 3rem;
+}
+
+/*#send_message_input{*/
+/*    width: 95%;*/
+/*}*/
+
+
+/*#send_message{*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+
+/*    margin: auto;*/
+/*}*/
+
+/*#send_message button{*/
+/*    box-sizing: border-box;*/
+/*    background: #DAF1FF;*/
+/*    height:3rem;*/
+/*    width: 100%;*/
+/*    margin: 0;*/
+/*    border: none;*/
+/*    display: inline;*/
+
+
+/*}*/
+
+/*#send_message button img{*/
+/*    height: 100%;*/
+/*}*/
+
+
+/*#send_message_input{*/
+/*    box-sizing: border-box;*/
+/*    background: #DAF1FF;*/
+/*    border: #2581B2 medium solid;*/
+/*    height:100%;*/
+/*    width: 94%;*/
+/*    margin: 0;*/
+/*    display: inline;*/
+/*}*/
+
+/*#send_message td{*/
+/*    !*border: red dashed medium;*!*/
+/*    padding: 0;*/
+/*    */
+/*}*/
+
+/*#send_message_td{*/
+/*    width: 5%;*/
+/*}*/
+
+/*#send_message table{*/
+/*    width: 100%;*/
+/*}*/
+/*#send_message tr{*/
+/*    height: 3rem;*/
+/*    padding: 0;*/
+/*}*/

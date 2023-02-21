@@ -1,27 +1,40 @@
 {% extends 'events/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'appeals/css/chat.css' %}">
+    <link rel="stylesheet" href="{% static 'appeals/css/moderator.css' %}">
+{% endblock %}
 
 {% block content %}
 
-    <style>
-        #send_message_input{
-            width: 80%;
-            height: 2rem;
-        }
-    </style>
 
-    <h1><a href="{% url 'appeals' %}"><</a> Чат с {{ student.first_name }}</h1>
+    <a href="{% url 'appeals' %}#{{ student.pk }}" class="specialbutton">
+        <div>Назад</div>
+    </a>
 
-    <br>
+    <h1 id="chatname">
+        {{ student.first_name }}
+    </h1>
+
+    <br><br>
 
     {% include 'appeals/chat.html' %}
 
-    <form action="{% url 'answer user' user_id=student.pk %}#autoScroll" method="post">
+    <br>
+    <form action="{% url 'answer user' user_id=student.pk %}#autoScroll" id="send_message" method="post">
     {% csrf_token %}
-    {{ form.content }}
 
-<button type="submit">Отправить</button>
-
-</form>
-
+        <table>
+            <tr>
+                <td id="send_message_input_td">{{ form.content }}</td>
+                <td id="send_message_td">
+                    <button type="submit">
+                        <img src="{% static 'appeals/images/send.png' %}" alt=">">
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
 
 {% endblock %}
